@@ -1,0 +1,57 @@
+body {
+	background-color: black;
+}
+
+.team {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.team h1 {
+	color: #222;
+	font-weight: 900;
+	font-size: 60px;
+	font-family: "Segoe UI";
+}
+
+.team-logo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	border: 3px solid rgba(100, 100, 100, 0.3);
+}
+
+.btnSet {
+	height: 70px;
+	width: 200px;
+	margin: 20px;
+	font-family: "Segoe UI";
+	font-size: 30px;
+	font-weight: 900;
+}
+
+/* -----SET SCORE---- */
+.setscore {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px
+}
+
+hr {
+	border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

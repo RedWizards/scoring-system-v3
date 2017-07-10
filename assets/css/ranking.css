@@ -1,0 +1,210 @@
+/*
+	Score Sheet Style
+*/
+
+html, body {
+	padding: 0;
+	margin: 0 auto;
+	height: 100%;
+}
+
+/*
+#bground { 
+  background: url('../../assets/images/bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#bground {
+	background-image: url('../../assets/images/bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+	background-repeat:   no-repeat;
+    background-position: left top; 
+}
+*/
+
+body {
+	background: url('../../assets/images/bg.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+#splash {
+	background-color: blue;
+	height: 100%;
+	width:: 100%;
+	background: blue;
+	position: absolute;
+	z-index: 999 !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+*/
+
+#ename {
+	padding: 0;
+	margin: 0;
+	border-top: 12px solid #D3610A;
+	background-color: white;
+	height: 20px;
+	border-bottom: 5px solid #511163;
+}
+
+#event-name {
+	border-top: 5px solid #78298E;
+	background-color: #511163;
+	margin: 0 0 1em 0;
+	padding: 0 1em 1em 1em;
+}
+
+#event-name span {
+	padding: 0;
+	margin: 0 0 2em 0;
+	font-size: 2em;
+	/*color: #C65600;
+	*/
+	color: #E28B48;
+	font-family: impact;
+	letter-spacing: 4px;
+}
+
+#score-sheet {
+	background-color: rgba(255,255,255,0.7);
+	height: 100%;
+}
+
+#list-team {
+	padding: 0 2em;
+}
+
+#team-btn-list {
+	padding: 2em 3em;
+}
+
+#team-lbl {
+	font-size: 3em;
+	font-style: bold;
+}
+
+#team-desc {
+	border: 2px dashed darkgray;
+	padding: 2em;
+	margin: 2em;
+	border-radius: 1em;
+
+}
+
+.team-members {
+	padding: 1em;
+}
+
+.long-desc {
+	margin-bottom: 1em;
+	padding: 1em;
+	font-style: italic;
+}
+
+.proj-name {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.team-desc {
+	margin-bottom: 1em;
+}
+
+.team-btn {
+	background-color: white;
+	width: 80%;
+	transition: all 0.5s ease;
+	border-radius: 0;
+	height: 100%;
+	padding: 1em;
+	color: #78298E;
+	border: 2px solid #F9BA7A;
+	text-align: center;
+}
+
+.team-btn:hover {
+	background-color: #F9BA7A;
+	color: white;
+	border: 2px solid #F9BA7A;
+}
+
+.team-btn:active {
+	background-color: #78298E;
+	color: white;
+	border: 2px solid #78298E;
+}
+
+#foot {
+	background-color: #511163;
+	margin-top: 1em;
+	padding: 1em;
+	color: lightgray;
+	border-bottom: 5px solid #D3610A;
+}
+
+#team-board {
+	height: 100%;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#remarks {
+	padding: 0 1em;
+}
+
+@media only screen and (max-device-width : 360px) {
+    
+	body {
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.team-btn {
+		width: 100%;
+		height: 100%;
+		padding: 1em;
+	}
+	
+	#event-name span {
+		font-size: 1.6em;
+		letter-spacing: 3px;
+	}
+	
+	#team-btn-list {
+		padding: 1em 2em;
+	}
+	
+	#list-team {
+		padding: 0;
+	}
+
+	#team-lbl {
+		padding: 2em 0;
+		font-size: 2em;
+		font-style: bold;
+	}
+	
+	#team-desc {
+		margin-bottom: 0;
+		margin-top: 1em;
+	}
+}

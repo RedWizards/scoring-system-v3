@@ -1,0 +1,157 @@
+/*
+	RED Wizard Scoring System Stylesheet
+*/
+
+html, body {
+	padding: 0;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+	background-color: #3f7373;
+	margin-bottom: 1em;
+}
+
+header #head-name {
+	color: white;
+	font-size: 4em;
+	font-family: "Courier New";
+	font-weight: bold;
+	outline: none;
+}
+
+#event-name {
+	color: white;
+	font-family: "Courier New";
+	outline: none;
+}
+
+#new-event-btn {
+	border-radius: 0;
+	border: 0;
+	transition: all 0.5s ease;
+}
+
+#new-event-btn:hover {
+	background-color: gray;
+	color: white;
+}
+
+#new-event-btn:active{
+	background-color: lightgray;
+}
+
+/* SECTION */
+
+section {
+	border-top: 1em solid #A31824;
+	background-color: lightgray;
+	/*background-color: rgba(255,255,255,0.8);*/	
+	min-height: 100%;
+}
+
+/*
+.bgimg {
+		background-image: url("images/bg.jpg"); 
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+}
+*/
+
+#no-event-record {
+	border: 1px dashed gray;
+	padding: 2em;
+	text-align: center;
+	margin: 3em;
+}
+
+#event-list {
+	padding: 2em;
+}
+
+.sheet-div {
+	padding: 1em;
+}
+/*
+.team-desc {
+	margin-bottom: 2em;
+}
+*/
+
+#team-desc {
+	border: 1px dashed gray;
+	margin: 0.5em;
+	border-radius: 10px;
+}
+
+#criteria {
+	padding: 1em;
+	/*border-bottom: 1px solid black;*/
+}
+
+.team-btn {
+	transition: all 0.5s ease;
+	color: gray;
+	width: 100%;
+	padding: 1em;
+	background-color: #EBEFBF;
+	border: 2px solid #EBEFBF;
+}
+
+.team-btn:hover {
+	color: black;
+	background-color: white;
+	border: 2px solid black;	
+}
+
+.team-btn:active {
+	color: darkgray;
+}
+
+.team-score {
+	text-align: right;
+	padding-right: 2em;
+}
+
+.team-logo {
+	text-align: left;
+	padding-left: 2em;
+}
+
+#done-style {
+	padding: 3em;
+}
+
+.btn-nav {
+	margin-top: 1em;
+	background-color: white;
+	transition: all 0.5s ease;
+	color: black;
+}
+
+.btn-nav:hover {
+	background-color: black;
+	color: white;
+}
+
+.btn-nav:active {
+	background-color: darkgray;
+	color: gray;
+}
+
+.submit-score {
+	
+}
+
+/* FOOTER */
+
+footer {
+	background-color: #3f7373;
+	margin-top: 1em;
+	padding: 1em;
+}

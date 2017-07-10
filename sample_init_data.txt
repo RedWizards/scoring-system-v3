@@ -1,0 +1,219 @@
+[
+  {
+    "team_id": 1,
+    "team_name": "Laurel Eye",
+    "project_id": 1,
+    "project_name": "Laurel Eye",
+    "project_type": "Web Application",
+    "short_desc": "An Uber of Tutorials",
+    "long_desc": "LaurelEye is an web-based platform where people can find other people willing to educate them in a vast array  of topics from academic subjects to arts and crafts.",
+    "members": [
+      {
+        "participant_id": 1,
+        "participant_firstName": "Chris",
+        "participant_lastName": "Militante",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 2,
+        "participant_firstName": "Patrick",
+        "participant_lastName": "Woogue",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 3,
+        "participant_firstName": "Gabriel Andrew",
+        "participant_lastName": "Pineda",
+        "participant_email": null,
+        "participant_contactNo": null
+      }
+    ],
+    "criteria": [
+      {
+        "criteria_id": 1,
+        "criteria_desc": "Scalability and Impact",
+        "criteria_longdesc": "To what extent can the project be replicated or adapted by the bank and  different sectors Can this app be used by its target audience?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 140,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 2,
+        "criteria_desc": "Execution and Design",
+        "criteria_longdesc": "Do they have a prototype? How functional is the technical demo? Design matters! Does the  project easy to use?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 141,
+          "score": 10
+        }
+      },
+      {
+        "criteria_id": 3,
+        "criteria_desc": "Business Model",
+        "criteria_longdesc": "How can they make it a successful  business? What customer segments they have defined and who are the early adopters? What are the (potential) revenue / cost models?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 142,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 4,
+        "criteria_desc": "Project Validation",
+        "criteria_longdesc": "Did they test the market Are they solving real problems? What is the value preposition?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 143,
+          "score": 0
+        }
+      }
+    ],
+    "total": 0
+  },
+  {
+    "team_id": 2,
+    "team_name": "Chibot",
+    "project_id": 2,
+    "project_name": "Chibot",
+    "project_type": "Mobile Application",
+    "short_desc": "Virtual Reality Listing app for Foreclosed Properties",
+    "long_desc": "The app focuses on Real Estate and Cars. The app can be deployed via major App stores (Apple App Store, Google Playstore). App also includes a VR walk-through of a Virtual Bank to familiarize customers of the different things you can do in a branch and also to promote the bank's ongoing promos or marketing campaigns. The property viewer will contain a \"dibs/I'm Interested\" button that submits the user's contact info, making it easier for the bank to contact new leads. This can help the bank increase its market reach faster. As for the users, this decreases guess work and logistics by cutting the need to go to the actual site just by experiencing the interactive photo-spheres and real-time 3D spaces that eventually speed up buyers'  decision to buy or not.",
+    "members": [],
+    "criteria": [
+      {
+        "criteria_id": 1,
+        "criteria_desc": "Scalability and Impact",
+        "criteria_longdesc": "To what extent can the project be replicated or adapted by the bank and  different sectors Can this app be used by its target audience?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 140,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 2,
+        "criteria_desc": "Execution and Design",
+        "criteria_longdesc": "Do they have a prototype? How functional is the technical demo? Design matters! Does the  project easy to use?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 141,
+          "score": 10
+        }
+      },
+      {
+        "criteria_id": 3,
+        "criteria_desc": "Business Model",
+        "criteria_longdesc": "How can they make it a successful  business? What customer segments they have defined and who are the early adopters? What are the (potential) revenue / cost models?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 142,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 4,
+        "criteria_desc": "Project Validation",
+        "criteria_longdesc": "Did they test the market Are they solving real problems? What is the value preposition?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 143,
+          "score": 0
+        }
+      }
+    ],
+    "total": 0
+  },
+  {
+    "team_id": 3,
+    "team_name": "Intern",
+    "project_id": 3,
+    "project_name": "Intern",
+    "project_type": "Web and Mobile Application",
+    "short_desc": "Amobile recording of traffic violations with banking payment. ",
+    "long_desc": "This app maintains the history of traffic violation records of a certain driver that has a account on the app while also recording the traffic enforcer info who arrested him/her. This app also provides digital banking for the driver that has been arrested. He/she can pay to Unionbank for his violation/s.",
+    "members": [
+      {
+        "participant_id": 4,
+        "participant_firstName": "Jelo Nicole",
+        "participant_lastName": "Javier",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 5,
+        "participant_firstName": "Jayson",
+        "participant_lastName": "Abilar",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 6,
+        "participant_firstName": "Carlo",
+        "participant_lastName": "Jumagdao",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 7,
+        "participant_firstName": "John Paul",
+        "participant_lastName": "Escala",
+        "participant_email": null,
+        "participant_contactNo": null
+      },
+      {
+        "participant_id": 8,
+        "participant_firstName": "Rafael",
+        "participant_lastName": "Desuyo",
+        "participant_email": null,
+        "participant_contactNo": null
+      }
+    ],
+    "criteria": [
+      {
+        "criteria_id": 1,
+        "criteria_desc": "Scalability and Impact",
+        "criteria_longdesc": "To what extent can the project be replicated or adapted by the bank and  different sectors Can this app be used by its target audience?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 140,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 2,
+        "criteria_desc": "Execution and Design",
+        "criteria_longdesc": "Do they have a prototype? How functional is the technical demo? Design matters! Does the  project easy to use?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 141,
+          "score": 10
+        }
+      },
+      {
+        "criteria_id": 3,
+        "criteria_desc": "Business Model",
+        "criteria_longdesc": "How can they make it a successful  business? What customer segments they have defined and who are the early adopters? What are the (potential) revenue / cost models?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 142,
+          "score": 20
+        }
+      },
+      {
+        "criteria_id": 4,
+        "criteria_desc": "Project Validation",
+        "criteria_longdesc": "Did they test the market Are they solving real problems? What is the value preposition?",
+        "criteria_weight": 25,
+        "score_details": {
+          "score_id": 143,
+          "score": 0
+        }
+      }
+    ],
+    "total": 50
+  }
+]

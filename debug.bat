@@ -1,0 +1,1 @@
+SET DEBUG=scoring-system-uhac:*

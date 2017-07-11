@@ -67,8 +67,8 @@
 
 	</body>
 
-	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/angular.min.js"></script>
 	<script src="assets/js/angular-animate.js"></script>
 	<script src="assets/js/judge-view.js"></script>
@@ -76,15 +76,26 @@
 
 	<script>
 	    $(function() { 
-		    $("#register-button").click(function(){
-		    	if($('#input-container').val() == ""){
-		    		//ajax request
-		    		//redirect to scoresheet.html
-		    	}
-		    	else{
-			        $(this).button('loading').queue(function() {
-			        	
-			        }); 
+		    $("#register-button").click(function(event){
+		    	event.preventDefault();
+		    	if($('#input-container').val() != ""){
+
+			        //ajax request
+			        $.ajax({
+					 	method: "POST",
+					 	url: "./database/create_judge.php",
+					 	data: {
+					 		judge_name: $('#input-container').val(),
+					 		event_id: "1"
+					 	}
+					})
+					.done(function( data ) {
+					    $(location).attr('href', 'scoresheet.php');
+					})
+					.fail(function(xhr, textStatus, errorThrown) {
+						console.log(errorThrown.filename);
+				        alert(xhr.responseText);
+				    });
 		    	}       
 		    });
 		});  

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2017 at 09:13 PM
+-- Generation Time: Jul 12, 2017 at 03:48 AM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -32,7 +32,7 @@ BEGIN
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `add_project`(IN `in_team_id` INT, IN `in_event_id` INT, IN `in_project_name` VARCHAR(45), IN `in_project_type` VARCHAR(45), IN `in_short_desc` VARCHAR(160), IN `in_long_desc` VARCHAR(800))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `add_project`(IN `in_team_id` INT, IN `in_event_id` INT, IN `in_project_name` VARCHAR(45), IN `in_project_type` VARCHAR(45), IN `in_short_desc` VARCHAR(160), IN `in_long_desc` VARCHAR(800), IN `in_pitch_order` INT(10))
 BEGIN
 	INSERT INTO project(
         team_id,
@@ -40,7 +40,8 @@ BEGIN
         project_name,
         project_type,
         short_desc,
-        long_desc
+        long_desc,
+        pitch_order
     )
     VALUES(
         in_team_id,
@@ -48,7 +49,8 @@ BEGIN
         in_project_name,
         in_project_type,
         in_short_desc,
-        in_long_desc
+        in_long_desc,
+        in_pitch_order
     );
 	SELECT LIST_INSERT_ID() as id;
 END$$
@@ -156,10 +158,10 @@ BEGIN
 	DEALLOCATE PREPARE stmt;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `create_criteria`(IN `in_event_id` INT(11), IN `in_criteria_desc` VARCHAR(45), IN `in_criteria_weight` INT(11))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `create_criteria`(IN `in_event_id` INT(11), IN `in_criteria_desc` VARCHAR(45), IN `in_criteria_weight` INT(11), IN `in_criteria_longdesc` VARCHAR(800))
 BEGIN
-	INSERT INTO criteria(event_id, criteria_desc, criteria_weight)
-		VALUES(in_event_id, in_criteria_desc, in_criteria_weight);
+	INSERT INTO criteria(event_id, criteria_desc, criteria_weight, criteria_longdesc)
+		VALUES(in_event_id, in_criteria_desc, in_criteria_weight, in_criteria_longdesc);
 	SELECT LAST_INSERT_ID() as id;
 END$$
 
@@ -315,7 +317,7 @@ BEGIN
     WHERE 
 		p.event_id = in_event_id
     AND t.team_id = p.team_id
-    ORDER BY t.team_name;
+    ORDER BY p.pitch_order;
 END$$
 
 DELIMITER ;
@@ -334,7 +336,17 @@ CREATE TABLE IF NOT EXISTS `criteria` (
   `criteria_longdesc` varchar(800) DEFAULT NULL,
   PRIMARY KEY (`criteria_id`),
   KEY `event_idx` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `criteria`
+--
+
+INSERT INTO `criteria` (`criteria_id`, `event_id`, `criteria_desc`, `criteria_weight`, `criteria_longdesc`) VALUES
+(2, 1, 'Scalability angd Impact', 25, NULL),
+(3, 1, 'EXECUTION\nAND DESIGN', 25, NULL),
+(4, 1, 'BUSINESS\nMODEL', 25, NULL),
+(5, 1, 'PROJECT\nVALIDATION', 25, NULL);
 
 -- --------------------------------------------------------
 
@@ -370,7 +382,17 @@ CREATE TABLE IF NOT EXISTS `judge` (
   `judge_name` varchar(45) DEFAULT 'Anonymous',
   PRIMARY KEY (`judge_id`),
   KEY `event_idx` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `judge`
+--
+
+INSERT INTO `judge` (`judge_id`, `event_id`, `judge_name`) VALUES
+(3, 1, 'Elaine Cedillo'),
+(4, 1, 'Elaine Cedillo'),
+(5, 1, 'RED POGI'),
+(6, 1, 'Red');
 
 -- --------------------------------------------------------
 
@@ -403,6 +425,7 @@ CREATE TABLE IF NOT EXISTS `project` (
   `project_type` varchar(45) DEFAULT NULL,
   `short_desc` varchar(160) DEFAULT NULL,
   `long_desc` varchar(800) DEFAULT NULL,
+  `pitch_order` int(10) NOT NULL,
   PRIMARY KEY (`project_id`),
   KEY `project_team_idx` (`team_id`),
   KEY `project_event_idx` (`event_id`)
@@ -452,7 +475,18 @@ CREATE TABLE IF NOT EXISTS `team` (
   `team_id` int(11) NOT NULL AUTO_INCREMENT,
   `team_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`team_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `team`
+--
+
+INSERT INTO `team` (`team_id`, `team_name`) VALUES
+(1, 'mambacodes'),
+(2, 'canleycodes'),
+(3, 'team intern'),
+(4, 'laurel eye'),
+(5, 'chibot');
 
 --
 -- Constraints for dumped tables

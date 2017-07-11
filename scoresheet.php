@@ -35,11 +35,13 @@
 							<div style="padding: 2em;">
 								<button class="btn team-btn" ng-click="setScore(team)">
 									<div class="row">
-										<div class="col-md-3 text-center">
 										<!--
+										<div class="col-md-3 text-center">
+										
 											<img class="img" id="team-logo" src="../../assets/images/{{team.team_id}}.png"/>
-										-->
+										
 										</div>
+										-->
 										<div class="col-md-6" id="col-lbl">
 											<span>{{team.team_name | uppercase}}</span>
 										</div>
@@ -208,7 +210,7 @@
 			
 			
 			<footer class="text-center">
-				<small>Powered by </small><strong>RED Wizard Events Management</strong> &copy; 2017
+				<small class="sub">POWERED BY</small><br/><strong>RED Wizard Events Management</strong><br/>&copy; 2017
 			</footer>
 			
 	</body>

@@ -311,13 +311,14 @@ header {
 	background-image: url("../images/header.png");
 }
 
-#scoresheet-name {
+footer {
 	margin: 0;
+	padding: 10px 0;
+	background-color: #564c89;
 	color: #fff;
 }
 
-footer {
+#scoresheet-name {
 	margin: 0;
-	padding: 0;
-	background-color: #564c89;
+	color: #fff;
 }

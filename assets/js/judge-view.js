@@ -8,6 +8,7 @@ function regJudgeClose() {
 	document.getElementById("event-cover").style.opacity = 1;
 }
 
+/*
 function submitName(){
 	if($('#input-container').val() == ""){
 
@@ -17,3 +18,4 @@ function submitName(){
 		}); 
 	}       
 }
+*/

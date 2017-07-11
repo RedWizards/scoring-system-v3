@@ -73,4 +73,19 @@
 	<script src="assets/js/judge-view.js"></script>
 	<script src="assets/js/angular-route.js"></script>
 
+	<script>
+	    $(function() { 
+		    $("#register-button").click(function(){
+		    	if($('#input-container').val() == ""){
+
+		    	}
+		    	else{
+			        $(this).button('loading').queue(function() {
+			            alert("LOADING...");
+			        }); 
+		    	}       
+		    });
+		});  
+	</script>
+
 </html>

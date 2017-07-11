@@ -29,6 +29,7 @@
 
 		<link rel="stylesheet" href="../assets/css/judge.css">
 		<script src="../assets/js/angular.min.js"></script>
+		
 		<script src="../assets/js/judge.js"></script>
 	
 </head>
@@ -107,8 +108,6 @@
 				                                    </tbody>
 
 				                                </table>
-
-
 
 				                            </div>
 

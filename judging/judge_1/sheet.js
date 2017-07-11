@@ -50,14 +50,6 @@
 			}
 
 			var url= '../../database/give_remarks.php';
-
-			$.ajax({
-				url: url,
-				data:{
-					project_id: team.project_id,
-					judge_id: 1
-				}
-			});
 			
 		}		
 		

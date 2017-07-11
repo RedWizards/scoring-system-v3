@@ -20,7 +20,7 @@ html, body, #wrapper {
     text-align: center;
 }
 
-#center-logo, #p1, #p2, #p3, #p4 {
+#center-logo, #p1, #p2, #p3, #p4, #thanks {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -321,4 +321,54 @@ footer {
 #scoresheet-name {
 	margin: 0;
 	color: #fff;
+}
+
+
+/* Done judging style */
+
+#thanks {
+	width: 20em;
+	height: 20em;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	margin-top: -10em;
+	margin-left: -10em;
+	transition: 0.3s;    
+}
+
+#greet {
+	color: white;
+	word-wrap: break-word;
+
+    -webkit-animation-duration: 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation-duration: 1s; /* Firefox < 16 */
+        -ms-animation-duration: 1s; /* Internet Explorer */
+         -o-animation-duration: 1s; /* Opera < 12.1 */
+            animation-duration: 1s;
+
+    -webkit-animation-fill-mode: both; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation-fill-mode: both; /* Firefox < 16 */
+        -ms-animation-fill-mode: both; /* Internet Explorer */
+         -o-animation-fill-mode: both; /* Opera < 12.1 */
+            animation-fill-mode: both;   
+
+	-webkit-animation-timing-function: ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation-timing-function: ease-in-out; /* Firefox < 16 */
+        -ms-animation-timing-function: ease-in-out; /* Internet Explorer */
+         -o-animation-timing-function: ease-in-out; /* Opera < 12.1 */
+            animation-timing-function: ease-in-out;  
+
+	-webkit-animation-iteration-count: infinite; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation-iteration-count: infinite; /* Firefox < 16 */
+        -ms-animation-iteration-count: infinite; /* Internet Explorer */
+         -o-animation-iteration-count: infinite; /* Opera < 12.1 */
+            animation-iteration-count: infinite; 
+
+
+    -webkit-animation-name: bounce; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation-name: bounce; /* Firefox < 16 */
+        -ms-animation-name: bounce; /* Internet Explorer */
+         -o-animation-name: bounce; /* Opera < 12.1 */
+            animation-name: bounce;
 }

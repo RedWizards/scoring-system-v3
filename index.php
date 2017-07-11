@@ -1,3 +1,5 @@
+<?php require("helpers/judging-checker.php"); ?>
+
 <!doctype html>
 <html>
 
@@ -89,8 +91,6 @@
 					 	}
 					})
 					.done(function( data ) {
-						alert(data);
-						console.log(data);
 					    $(location).attr('href', 'scoresheet.php');
 					})
 					.fail(function(xhr, textStatus, errorThrown) {

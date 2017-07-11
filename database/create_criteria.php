@@ -5,8 +5,9 @@
     	$event_id = $_POST['event_id'];
 		$criteria_desc = $_POST['criteria_desc'];
 		$criteria_weight = $_POST['criteria_weight'];
+		$criteria_longdesc = $_POST['criteria_longdesc'];
 
-		$sql = "CALL create_criteria('".$event_id."','".$criteria_desc."','".$criteria_weight."')";
+		$sql = "CALL create_criteria('".$event_id."','".$criteria_desc."','".$criteria_weight."','".$criteria_longdesc."')";
 
 		if($result = $conn->query($sql)){
 			$row = $result->fetch_assoc();

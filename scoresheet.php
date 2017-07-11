@@ -197,9 +197,8 @@
 					
 					</div>
 					
-					
 					<div class="text-center" ng-hide="activeNow">
-						<a href="#"><button id="done-btn">DONE</button></a>
+						<a href="./helpers/logout.php"><button id="done-btn">DONE</button></a>
 					</div>
 					
 					

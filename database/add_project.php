@@ -15,7 +15,8 @@
 			$project_name."','".
 			$project_type."','".
 			$short_description."','".
-			$long_description.
+			$long_description."','".
+			rand(1,200)
 			"')";
 
 		if($result = $conn->query($sql)){

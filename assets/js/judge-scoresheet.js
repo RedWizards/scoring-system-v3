@@ -13,7 +13,7 @@
 			$.ajax({
 				url: sheet_url,
 				data:{
-					judge_id: <?php session_start(); echo($_SESSION['judge_id']);?>,
+					judge_id: 1,
 					event_id: 1
 				}
 			}).done(function(data) {

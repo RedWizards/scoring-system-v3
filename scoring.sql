@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2017 at 02:42 AM
+-- Generation Time: Jul 11, 2017 at 08:48 AM
 -- Server version: 5.6.26-log
 -- PHP Version: 7.0.4
 
@@ -162,6 +162,7 @@ END$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `create_judge` (IN `in_event_id` INT(11), IN `in_judge_name` VARCHAR(45))  BEGIN
 	INSERT INTO judge(event_id, judge_name)
 		VALUES(in_event_id, in_judge_name);
+    SELECT LAST_INSERT_ID() as id;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `get_average_score` (IN `in_team_id` INT)  BEGIN
@@ -308,16 +309,6 @@ CREATE TABLE `criteria` (
   `criteria_longdesc` varchar(800) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `criteria`
---
-
-INSERT INTO `criteria` (`criteria_id`, `event_id`, `criteria_desc`, `criteria_weight`, `criteria_longdesc`) VALUES
-(1, 1, 'Scalability and Impact', 25, 'To what extent can the project be replicated or adapted by the bank and  different sectors Can this app be used by its target audience?'),
-(2, 1, 'Execution and Design', 25, 'Do they have a prototype? How functional is the technical demo? Design matters! Does the  project easy to use?'),
-(3, 1, 'Business Model', 25, 'How can they make it a successful  business? What customer segments they have defined and who are the early adopters? What are the (potential) revenue / cost models?'),
-(4, 1, 'Project Validation', 25, 'Did they test the market Are they solving real problems? What is the value preposition?');
-
 -- --------------------------------------------------------
 
 --
@@ -332,13 +323,6 @@ CREATE TABLE `event` (
   `event_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `event`
---
-
-INSERT INTO `event` (`event_id`, `event_name`, `event_host`, `event_desc`, `event_date`) VALUES
-(1, 'U:HAC Ultimate Pitching ', 'Unionbank', NULL, '2017-04-28 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -350,27 +334,6 @@ CREATE TABLE `judge` (
   `event_id` int(11) DEFAULT NULL,
   `judge_name` varchar(45) DEFAULT 'Anonymous'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `judge`
---
-
-INSERT INTO `judge` (`judge_id`, `event_id`, `judge_name`) VALUES
-(1, 1, 'Judge 1'),
-(2, 1, 'Judge 2'),
-(3, 1, 'Judge 3'),
-(4, 1, 'Judge 4'),
-(5, 1, 'Judge 5'),
-(6, 1, 'Judge 6'),
-(7, 1, 'Judge 7'),
-(8, 1, 'Judge 8'),
-(9, 1, 'Judge 9'),
-(10, 1, 'Judge 10'),
-(11, 1, 'Judge 11'),
-(12, 1, 'Judge 12'),
-(13, 1, 'Judge 13'),
-(14, 1, 'Judge 14'),
-(15, 1, 'Judge 15');
 
 -- --------------------------------------------------------
 
@@ -387,20 +350,6 @@ CREATE TABLE `participants` (
   `participant_contactNo` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `participants`
---
-
-INSERT INTO `participants` (`participant_id`, `team_id`, `participant_firstName`, `participant_lastName`, `participant_email`, `participant_contactNo`) VALUES
-(1, 1, 'Chris', 'Militante', NULL, NULL),
-(2, 1, 'Patrick', 'Woogue', NULL, NULL),
-(3, 1, 'Gabriel Andrew', 'Pineda', NULL, NULL),
-(4, 3, 'Jelo Nicole', 'Javier', NULL, NULL),
-(5, 3, 'Jayson', 'Abilar', NULL, NULL),
-(6, 3, 'Carlo', 'Jumagdao', NULL, NULL),
-(7, 3, 'John Paul', 'Escala', NULL, NULL),
-(8, 3, 'Rafael', 'Desuyo', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -416,15 +365,6 @@ CREATE TABLE `project` (
   `short_desc` varchar(160) DEFAULT NULL,
   `long_desc` varchar(800) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `project`
---
-
-INSERT INTO `project` (`project_id`, `event_id`, `team_id`, `project_name`, `project_type`, `short_desc`, `long_desc`) VALUES
-(1, 1, 1, 'LaurelEye', 'Web Application', 'An Uber of Tutorials', 'LaurelEye is an web-based platform where people can find other people willing to educate them in a vast array  of topics from academic subjects to arts and crafts.'),
-(2, 1, 2, 'uBid', 'Mobile Application', 'Virtual Reality Listing app for Foreclosed Properties', 'The app focuses on Real Estate and Cars. The app can be deployed via major App stores (Apple App Store, Google Playstore). App also includes a VR walk-through of a Virtual Bank to familiarize customers of the different things you can do in a branch and also to promote the bank''s ongoing promos or marketing campaigns. The property viewer will contain a "dibs/I''m Interested" button that submits the user''s contact info, making it easier for the bank to contact new leads. This can help the bank increase its market reach faster. As for the users, this decreases guess work and logistics by cutting the need to go to the actual site just by experiencing the interactive photo-spheres and real-time 3D spaces that eventually speed up buyers''  decision to buy or not.'),
-(3, 1, 3, 'Hooleh', 'Web and Mobile Application', 'Amobile recording of traffic violations with banking payment. ', 'This app maintains the history of traffic violation records of a certain driver that has a account on the app while also recording the traffic enforcer info who arrested him/her. This app also provides digital banking for the driver that has been arrested. He/she can pay to Unionbank for his violation/s.');
 
 -- --------------------------------------------------------
 
@@ -453,192 +393,6 @@ CREATE TABLE `scores` (
   `score` double DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `scores`
---
-
-INSERT INTO `scores` (`score_id`, `judge_id`, `criteria_id`, `project_id`, `score`) VALUES
-(1, 1, 1, 1, 0),
-(2, 1, 2, 1, 0),
-(3, 1, 3, 1, 0),
-(4, 1, 4, 1, 0),
-(5, 2, 1, 1, 0),
-(6, 2, 2, 1, 0),
-(7, 2, 3, 1, 0),
-(8, 2, 4, 1, 0),
-(9, 3, 1, 1, 0),
-(10, 3, 2, 1, 0),
-(11, 3, 3, 1, 0),
-(12, 3, 4, 1, 0),
-(13, 4, 1, 1, 0),
-(14, 4, 2, 1, 0),
-(15, 4, 3, 1, 0),
-(16, 4, 4, 1, 0),
-(17, 5, 1, 1, 0),
-(18, 5, 2, 1, 0),
-(19, 5, 3, 1, 0),
-(20, 5, 4, 1, 0),
-(21, 6, 1, 1, 0),
-(22, 6, 2, 1, 0),
-(23, 6, 3, 1, 0),
-(24, 6, 4, 1, 0),
-(25, 7, 1, 1, 0),
-(26, 7, 2, 1, 0),
-(27, 7, 3, 1, 0),
-(28, 7, 4, 1, 0),
-(29, 8, 1, 1, 0),
-(30, 8, 2, 1, 0),
-(31, 8, 3, 1, 0),
-(32, 8, 4, 1, 0),
-(33, 9, 1, 1, 0),
-(34, 9, 2, 1, 0),
-(35, 9, 3, 1, 0),
-(36, 9, 4, 1, 0),
-(37, 10, 1, 1, 0),
-(38, 10, 2, 1, 0),
-(39, 10, 3, 1, 0),
-(40, 10, 4, 1, 0),
-(41, 11, 1, 1, 0),
-(42, 11, 2, 1, 0),
-(43, 11, 3, 1, 0),
-(44, 11, 4, 1, 0),
-(45, 12, 1, 1, 0),
-(46, 12, 2, 1, 0),
-(47, 12, 3, 1, 0),
-(48, 12, 4, 1, 0),
-(49, 13, 1, 1, 0),
-(50, 13, 2, 1, 0),
-(51, 13, 3, 1, 0),
-(52, 13, 4, 1, 0),
-(53, 14, 1, 1, 0),
-(54, 14, 2, 1, 0),
-(55, 14, 3, 1, 0),
-(56, 14, 4, 1, 0),
-(57, 15, 1, 1, 0),
-(58, 15, 2, 1, 0),
-(59, 15, 3, 1, 0),
-(60, 15, 4, 1, 0),
-(61, 1, 1, 2, 0),
-(62, 1, 2, 2, 0),
-(63, 1, 3, 2, 0),
-(64, 1, 4, 2, 0),
-(65, 2, 1, 2, 0),
-(66, 2, 2, 2, 0),
-(67, 2, 3, 2, 0),
-(68, 2, 4, 2, 0),
-(69, 3, 1, 2, 0),
-(70, 3, 2, 2, 0),
-(71, 3, 3, 2, 0),
-(72, 3, 4, 2, 0),
-(73, 4, 1, 2, 0),
-(74, 4, 2, 2, 0),
-(75, 4, 3, 2, 0),
-(76, 4, 4, 2, 0),
-(77, 5, 1, 2, 0),
-(78, 5, 2, 2, 0),
-(79, 5, 3, 2, 0),
-(80, 5, 4, 2, 0),
-(81, 6, 1, 2, 0),
-(82, 6, 2, 2, 0),
-(83, 6, 3, 2, 0),
-(84, 6, 4, 2, 0),
-(85, 7, 1, 2, 0),
-(86, 7, 2, 2, 0),
-(87, 7, 3, 2, 0),
-(88, 7, 4, 2, 0),
-(89, 8, 1, 2, 0),
-(90, 8, 2, 2, 0),
-(91, 8, 3, 2, 0),
-(92, 8, 4, 2, 0),
-(93, 9, 1, 2, 0),
-(94, 9, 2, 2, 0),
-(95, 9, 3, 2, 0),
-(96, 9, 4, 2, 0),
-(97, 10, 1, 2, 0),
-(98, 10, 2, 2, 0),
-(99, 10, 3, 2, 0),
-(100, 10, 4, 2, 0),
-(101, 11, 1, 2, 0),
-(102, 11, 2, 2, 0),
-(103, 11, 3, 2, 0),
-(104, 11, 4, 2, 0),
-(105, 12, 1, 2, 0),
-(106, 12, 2, 2, 0),
-(107, 12, 3, 2, 0),
-(108, 12, 4, 2, 0),
-(109, 13, 1, 2, 0),
-(110, 13, 2, 2, 0),
-(111, 13, 3, 2, 0),
-(112, 13, 4, 2, 0),
-(113, 14, 1, 2, 0),
-(114, 14, 2, 2, 0),
-(115, 14, 3, 2, 0),
-(116, 14, 4, 2, 0),
-(117, 15, 1, 2, 0),
-(118, 15, 2, 2, 0),
-(119, 15, 3, 2, 0),
-(120, 15, 4, 2, 0),
-(121, 1, 1, 3, 0),
-(122, 1, 2, 3, 0),
-(123, 1, 3, 3, 0),
-(124, 1, 4, 3, 0),
-(125, 2, 1, 3, 0),
-(126, 2, 2, 3, 0),
-(127, 2, 3, 3, 0),
-(128, 2, 4, 3, 0),
-(129, 3, 1, 3, 0),
-(130, 3, 2, 3, 0),
-(131, 3, 3, 3, 0),
-(132, 3, 4, 3, 0),
-(133, 4, 1, 3, 0),
-(134, 4, 2, 3, 0),
-(135, 4, 3, 3, 0),
-(136, 4, 4, 3, 0),
-(137, 5, 1, 3, 0),
-(138, 5, 2, 3, 0),
-(139, 5, 3, 3, 0),
-(140, 5, 4, 3, 0),
-(141, 6, 1, 3, 0),
-(142, 6, 2, 3, 0),
-(143, 6, 3, 3, 0),
-(144, 6, 4, 3, 0),
-(145, 7, 1, 3, 0),
-(146, 7, 2, 3, 0),
-(147, 7, 3, 3, 0),
-(148, 7, 4, 3, 0),
-(149, 8, 1, 3, 0),
-(150, 8, 2, 3, 0),
-(151, 8, 3, 3, 0),
-(152, 8, 4, 3, 0),
-(153, 9, 1, 3, 0),
-(154, 9, 2, 3, 0),
-(155, 9, 3, 3, 0),
-(156, 9, 4, 3, 0),
-(157, 10, 1, 3, 0),
-(158, 10, 2, 3, 0),
-(159, 10, 3, 3, 0),
-(160, 10, 4, 3, 0),
-(161, 11, 1, 3, 0),
-(162, 11, 2, 3, 0),
-(163, 11, 3, 3, 0),
-(164, 11, 4, 3, 0),
-(165, 12, 1, 3, 0),
-(166, 12, 2, 3, 0),
-(167, 12, 3, 3, 0),
-(168, 12, 4, 3, 0),
-(169, 13, 1, 3, 0),
-(170, 13, 2, 3, 0),
-(171, 13, 3, 3, 0),
-(172, 13, 4, 3, 0),
-(173, 14, 1, 3, 0),
-(174, 14, 2, 3, 0),
-(175, 14, 3, 3, 0),
-(176, 14, 4, 3, 0),
-(177, 15, 1, 3, 0),
-(178, 15, 2, 3, 0),
-(179, 15, 3, 3, 0),
-(180, 15, 4, 3, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -649,15 +403,6 @@ CREATE TABLE `team` (
   `team_id` int(11) NOT NULL,
   `team_name` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `team`
---
-
-INSERT INTO `team` (`team_id`, `team_name`) VALUES
-(1, 'LaurelEye'),
-(2, 'Chibot'),
-(3, 'Intern');
 
 --
 -- Indexes for dumped tables
@@ -739,12 +484,12 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `judge`
 --
 ALTER TABLE `judge`
-  MODIFY `judge_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `judge_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `participants`
 --
 ALTER TABLE `participants`
-  MODIFY `participant_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `participant_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `project`
 --

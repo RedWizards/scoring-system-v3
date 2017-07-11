@@ -199,7 +199,7 @@
 					
 					
 					<div class="text-center" style="margin-bottom: 2em;" ng-hide="activeNow">
-						<a href="../out.php"><button id="done-btn">DONE</button></a>
+						<a href="./helpers/logout.php"><button id="done-btn">DONE</button></a>
 					</div>
 					
 					

@@ -13,6 +13,7 @@
 			session_start();
 			if (!isset($_SESSION['judge_id'])) {
 				$_SESSION['judge_id'] = $row['id'];
+				$_SESSION['registered'] = true;
 			}
 			
 			echo(json_encode($row));

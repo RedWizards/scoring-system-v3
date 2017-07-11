@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['judge_id']){
+	if(isset($_SESSION['judge_id'])){
 		//redirect to judging page
 	}
 	else{

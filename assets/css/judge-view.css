@@ -299,3 +299,25 @@ background: radial-gradient(center, #BF4D00, #E52A00);
 #closeRegBtn:hover {
 	color: gray;
 }
+
+
+/* Judge Scoresheet */
+
+header {
+	margin: 0;
+	padding: 14px 0 0 0;
+	height: 50px;
+	background-color: #564c89;
+	background-image: url("../images/header.png");
+}
+
+#scoresheet-name {
+	margin: 0;
+	color: #fff;
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+	background-color: #564c89;
+}

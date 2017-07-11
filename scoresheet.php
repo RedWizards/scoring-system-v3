@@ -1,4 +1,4 @@
-<?php require("helpers/security.php"); exit();?>
+<?php //require("helpers/security.php"); exit();?>
 
 <!doctype html>
 <html>
@@ -18,17 +18,14 @@
 
 	<body>
 
-		<div id="div-body">
 			<header>
-				<div id="ename">
-				</div>
-				<div class="text-center" id="event-name">
-					<!-- Name of Event -->
-					<span><b>U:HAC</b> Cebu</span>
+				<div class="text-center">
+					<h3 id="scoresheet-name"><b>UHAC</b> Cebu</h3>
 				</div>
 			</header>
 			
 			<section ng-app="scoring-sheet" ng-controller="sheet-ctrl" ng-init="init()">
+
 				<div id="score-sheet">
 					
 					<div class="text-center" ng-repeat="team in teams">
@@ -39,7 +36,9 @@
 								<button class="btn team-btn" ng-click="setScore(team)">
 									<div class="row">
 										<div class="col-md-3 text-center">
+										<!--
 											<img class="img" id="team-logo" src="../../assets/images/{{team.team_id}}.png"/>
+										-->
 										</div>
 										<div class="col-md-6" id="col-lbl">
 											<span>{{team.team_name | uppercase}}</span>
@@ -209,17 +208,13 @@
 			
 			
 			<footer class="text-center">
-				<div id="foot">
-					<small>Powered by </small><strong>RED Wizard Events Management</strong> &copy; 2017
-				</div>
+				<small>Powered by </small><strong>RED Wizard Events Management</strong> &copy; 2017
 			</footer>
 			
-		</div>
-
 	</body>
 
-	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/angular.min.js"></script>
 	<script src="assets/js/angular-animate.js"></script>
 	<script src="assets/js/judge-view.js"></script>

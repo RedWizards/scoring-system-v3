@@ -1,4 +1,4 @@
-<?php require("helpers/security.php"); exit();?>
+<?php require("helpers/security.php"); ?>
 
 <!doctype html>
 <html>

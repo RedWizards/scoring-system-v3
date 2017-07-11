@@ -79,21 +79,22 @@
 		    $("#register-button").click(function(event){
 		    	event.preventDefault();
 		    	if($('#input-container').val() != ""){
-
 			        //ajax request
 			        $.ajax({
 					 	method: "POST",
-					 	url: "./database/create_judge.php",
+					 	url: "database/create_judge.php",
 					 	data: {
 					 		judge_name: $('#input-container').val(),
 					 		event_id: "1"
 					 	}
 					})
 					.done(function( data ) {
+						alert(data);
+						console.log(data);
 					    $(location).attr('href', 'scoresheet.php');
 					})
 					.fail(function(xhr, textStatus, errorThrown) {
-						console.log(errorThrown.filename);
+						alert(errorThrown.filename);
 				        alert(xhr.responseText);
 				    });
 		    	}       

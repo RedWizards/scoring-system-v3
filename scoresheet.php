@@ -1,6 +1,4 @@
-<?php
-	require_once('/helpers/security.php');
-?>
+<?php require("helpers/security.php"); exit();?>
 
 <!doctype html>
 <html>

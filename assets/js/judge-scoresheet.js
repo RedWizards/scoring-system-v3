@@ -1,29 +1,32 @@
 
 	var app = angular.module('scoring-sheet', []);
 
-	app.controller('sheet-ctrl', function($scope) {
-		
+	app.controller('sheet-ctrl', ['$scope' , 'Session', function($scope, Session) {
+
 		$scope.activeNow =  false;
 		$scope.isActive = false;
-		
-		var sheet_url= '../../database/initial_data.php';
-		$scope.scoreSheet = [];
-		
-		function init() {
+
+		Session.then(function(response){
+			$scope.session = response;
+		});
+
+		$scope.init = function(teams){
 			$.ajax({
-				url: sheet_url,
+				method: 'GET',
+				url: '././database/teams.php',
 				data:{
-					judge_id: 1,
 					event_id: 1
 				}
-			}).done(function(data) {
-				console.log(data);
+			})
+			.done(function(data){
 				$scope.teams = data;
-				$scope.$apply();
+			})
+			.fail(function(xhr, textStatus, errorThrown) {
+				alert(errorThrown.filename);
+			    alert(xhr.responseText);
 			});
 		}
-		
-		init();
+
 
 		$scope.setScores = function(team){
 			var sheet_url= '../../database/update_score.php';
@@ -48,16 +51,6 @@
 			}else{
 				alert("Error submitting scovres.");
 			}
-
-			var url= '../../database/give_remarks.php';
-
-			$.ajax({
-				url: url,
-				data:{
-					project_id: team.project_id,
-					judge_id: 1
-				}
-			});
 			
 		}		
 		
@@ -77,5 +70,11 @@
 			team.isActive = false;
 			$scope.activeNow = false;
 		}
-		
+
+	}]);
+
+	app.factory('Session', function($http){
+		return $http.get('././helpers/session.php').then(function(result){
+			return result.data;
+		});
 	});

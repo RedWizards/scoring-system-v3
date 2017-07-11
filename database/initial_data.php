@@ -3,7 +3,7 @@
 	require_once('connection.php');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    	$event_id = $_GET['event_id'];
+    	$event_id = 1;
     	$judge_id = $_GET['judge_id'];
 
     	//array variables

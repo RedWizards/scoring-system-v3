@@ -1,4 +1,6 @@
-<?php require("helpers/security.php"); ?>
+<?php
+	require("helpers/security.php"); 
+?>
 
 <!doctype html>
 <html>
@@ -13,10 +15,15 @@
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		-->
 		<link rel="stylesheet" href="assets/css/judge-view.css">
+		<script src="assets/js/angular.min.js"></script>
+		<script src="assets/js/angular-animate.js"></script>
+		<script src="assets/js/angular-route.js"></script>
 
 	</head>
 
-	<body>
+	<body ng-app="scoring-sheet">
+
+
 
 			<header>
 				<div class="text-center">
@@ -24,7 +31,7 @@
 				</div>
 			</header>
 			
-			<section ng-app="scoring-sheet" ng-controller="sheet-ctrl" ng-init="init()">
+			<section ng-controller="sheet-ctrl" ng-init="init()">
 
 				<div id="score-sheet">
 					
@@ -215,10 +222,7 @@
 
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/angular.min.js"></script>
-	<script src="assets/js/angular-animate.js"></script>
 	<script src="assets/js/judge-view.js"></script>
 	<script src="assets/js/judge-scoresheet.js"></script>
-	<script src="assets/js/angular-route.js"></script>
 
 </html>

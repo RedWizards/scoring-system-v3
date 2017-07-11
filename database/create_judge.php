@@ -10,11 +10,12 @@
 		if($result = $conn->query($sql)){
 			$row = $result->fetch_assoc();
 
-				session_start();
-				if (!isset($_SESSION['judge_id'])) {
-				  $_SESSION['judge_id'] = $row['id'];
-				}
-			print(json_encode($row));
+			session_start();
+			if (!isset($_SESSION['judge_id'])) {
+			  $_SESSION['judge_id'] = $row['id'];
+			}
+			
+			echo(json_encode($row));
 
 			$result->free();
 		}

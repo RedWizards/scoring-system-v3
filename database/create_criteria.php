@@ -1,18 +1,20 @@
 <?php
 	require_once('connection.php');
 
-	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    	$event_id = $_GET['event_id'];
-		$criteria_desc = $_GET['criteria_desc'];
-		$criteria_weight = $_GET['criteria_weight'];
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    	$event_id = $_POST['event_id'];
+		$criteria_desc = $_POST['criteria_desc'];
+		$criteria_weight = $_POST['criteria_weight'];
 
 		$sql = "CALL create_criteria('".$event_id."','".$criteria_desc."','".$criteria_weight."')";
 
-		if(!$conn->query($sql)){
-			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
+		if($result = $conn->query($sql)){
+			$row = $result->fetch_assoc();
+			echo(json_encode($row));
+			$result->free();
 		}
 		else{
-			echo("Success!");
+			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
 		}
 	}
 	else{

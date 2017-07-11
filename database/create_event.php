@@ -8,11 +8,13 @@
 
 		$sql = "CALL create_criteria('".$event_name."','".$event_host."','".$event_description."')";
 
-		if(!$conn->query($sql)){
-			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
+		if($result = $conn->query($sql)){
+			$row = $result->fetch_assoc();
+			echo(json_encode($row));
+			$result->free();
 		}
 		else{
-			echo("Success!");
+			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
 		}
 	}
 	else{

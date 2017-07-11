@@ -311,6 +311,12 @@ header {
 	background-image: url("../images/header.png");
 }
 
+section {
+	margin: 0;
+	padding: 50px 0;
+	background-color: #fff;
+}
+
 footer {
 	margin: 0;
 	padding: 10px 0;
@@ -321,6 +327,24 @@ footer {
 #scoresheet-name {
 	margin: 0;
 	color: #fff;
+}
+
+#done-btn{
+	margin-top: 50px;
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#done-btn:hover {
+	background-color: #3923ab;
+}
+
+#done-btn:focus {
+	background-color: #1b0688;
 }
 
 

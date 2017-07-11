@@ -181,7 +181,7 @@
 										</div>
 									</div>
 									-->
-									<div class="row" style="margin-top: 1em;">
+									<div class="row" >
 									
 											<button class="submit-score" ng-click="setScores(team)">SUBMIT</button>
 										
@@ -198,14 +198,13 @@
 					</div>
 					
 					
-					<div class="text-center" style="margin-bottom: 2em;" ng-hide="activeNow">
-						<a href="../out.php"><button id="done-btn">DONE</button></a>
+					<div class="text-center" ng-hide="activeNow">
+						<a href="#"><button id="done-btn">DONE</button></a>
 					</div>
 					
 					
-						</div>
-						
 				</div>
+
 			</section>
 			
 			

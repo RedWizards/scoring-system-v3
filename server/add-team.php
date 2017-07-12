@@ -20,7 +20,7 @@
 			<h3>TEAM REGISTRATION</h3><br/><br/>
 
 			<div>
-				<form action="" method="">
+				<form id="reg-form">
 					<div>
 						<label for="team_name">Team Name </label>
 						<input type="text" name="team_name" placeholder="..." class="form-control" required/>
@@ -52,5 +52,24 @@
 
 	<script src="../assets/js/jquery.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$("#idForm").submit(function(e) {
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+
+		    var url = "path/to/your/script.php"; // the script where you handle the form input.
+
+		    $.ajax({
+		        type: "POST",
+		        url: url,
+		        data: $("#idForm").serialize(), // serializes the form's elements.
+		        success: function(data)
+		        {
+		            alert(data); // show response from the php script.
+		        }
+		    });
+
+		    
+		});
+	</script>
 
 </html>

@@ -96,12 +96,17 @@
 				if($result){
 				    $row = $result->fetch_object();
 
-				    //convert score_id to int and score to float
-				    $row->score_id = intval($row->score_id);
-					$row->score = floatval($row->score);
+					if(isset($row)){
+						//convert score_id to int and score to float
+					    $row->score_id = intval($row->score_id);
+						$row->score = floatval($row->score);
+					}
+					else{
+						$score = array();
+						$score['score_id'] = 0;
+						$score['score'] = 0;
 
-					if($row->score == 0){
-						$row->score_id = null;
+						$row = (object) $score;
 					}
 
 				    $total += $row->score;

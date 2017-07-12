@@ -62,36 +62,13 @@
 									<div class="text-justify" style="padding: 0 10px;">
 										<p>{{team.long_desc}}</p>
 									</div>
-									<!--
-									<div class="text-left">
-										<p><b>Developers</b></p>
-										<ul>
-											<li ng-repeat="member in team.members">
-												{{member.participant_firstName}} {{member.participant_lastName}}
-											</li>
-										</ul>
-									</div>
-									-->
 							</div>
 							
 							<div id="main-sheet" class="text-center">
 								
 								<h3><i>SCORING SHEET</i></h3>
-									<!--
-									<div class="text-center" id="sheet-title">
-									
-										<div class="col-md-6">
-											<h5>CRITERIA</h5>
-										</div>
-										
-										<div class="col-md-6">
-											<h5>SCORE</h5>
-										</div>
-										
-									</div>
-									-->
+
 								<hr/>
-									
 									
 								<div ng-repeat="criteria in team.criteria">
 									
@@ -103,28 +80,28 @@
 										</div>
 															
 										<div class="pull-right">
-											<h4><input type="number" class="text-right" name="criteria-{{criteria.criteria_id}}" placeholder="0" max="25" min="0" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+											<h4><input type="number" class="text-right" name="criteria-{{criteria.criteria_id}}" placeholder="0" max="{{criteria.criteria_weight}}" min="0" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
 										</div>
 
 									</div>
 
 								</div>
 									
-									<hr/>
+								<hr/>
 									
-									<h2 class="pull-left">TOTAL</h2><h2 class="pull-right">{{team.total}} %</h2>
+								<h2 class="pull-left">TOTAL</h2><h2 class="pull-right">{{team.total}} %</h2>
 
-									<br/><br/><br/>
+								<br/><br/>
+								
+								<button id="submit-btn" ng-click="setScores(team)">SUBMIT</button>
 									
-									<div class="text-center">
-											<button id="submit-btn" ng-click="setScores(team)">SUBMIT</button>
-									</div>
 									
-									<br/>
+								<br/>
 									
-								</div>
+							</div>
 							
 						</div>
+						
 					</div>
 					
 					<div class="text-center" ng-hide="activeNow">

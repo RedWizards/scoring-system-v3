@@ -12,8 +12,7 @@
 
 			session_start();
 			if (!isset($_SESSION['judge_id'])) {
-				// $_SESSION['judge_id'] = $row['id'];
-				$_SESSION['judge_id'] = 3;
+				$_SESSION['judge_id'] = $row['id'];
 				$_SESSION['registered'] = true;
 			}
 			

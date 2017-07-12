@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2017 at 03:48 AM
+-- Generation Time: Jul 12, 2017 at 11:34 AM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.17
 
@@ -382,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `judge` (
   `judge_name` varchar(45) DEFAULT 'Anonymous',
   PRIMARY KEY (`judge_id`),
   KEY `event_idx` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `judge`
@@ -392,7 +392,10 @@ INSERT INTO `judge` (`judge_id`, `event_id`, `judge_name`) VALUES
 (3, 1, 'Elaine Cedillo'),
 (4, 1, 'Elaine Cedillo'),
 (5, 1, 'RED POGI'),
-(6, 1, 'Red');
+(6, 1, 'Red'),
+(7, 1, 'Red Periabras'),
+(8, 1, 'Red'),
+(9, 1, 'Redentor Periabras');
 
 -- --------------------------------------------------------
 
@@ -429,7 +432,15 @@ CREATE TABLE IF NOT EXISTS `project` (
   PRIMARY KEY (`project_id`),
   KEY `project_team_idx` (`team_id`),
   KEY `project_event_idx` (`event_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `project`
+--
+
+INSERT INTO `project` (`project_id`, `event_id`, `team_id`, `project_name`, `project_type`, `short_desc`, `long_desc`, `pitch_order`) VALUES
+(1, 1, 1, 'Not Hotdog', 'Android App', 'Jian Yiaaaaaaaang', 'Shazam for Food', 1),
+(2, 1, 2, 'Middle Out', 'Algorithm', 'hehe', 'hehehehe', 6);
 
 -- --------------------------------------------------------
 

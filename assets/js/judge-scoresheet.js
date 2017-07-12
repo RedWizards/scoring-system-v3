@@ -4,29 +4,30 @@
 	app.controller('sheet-ctrl', ['$scope' , 'Session', function($scope, Session) {
 
 		$scope.activeNow =  false;
-		$scope.isActive = false;
+		$scope.isActive = false;			
 
-		Session.then(function(response){
-			$scope.session = response;
-		});
 
-		$scope.init = function(teams){
-			$.ajax({
-				method: 'GET',
-				url: '././database/teams.php',
-				data:{
-					event_id: 1
-				}
-			})
-			.done(function(data){
-				$scope.teams = data;
-			})
-			.fail(function(xhr, textStatus, errorThrown) {
-				alert(errorThrown.filename);
-			    alert(xhr.responseText);
+		$scope.init = function(){
+			Session.then(function(response){
+				$scope.session = response;
+
+				$.ajax({
+					method: 'GET',
+					url: '././database/initial_data.php',
+					data:{
+						event_id: 1,
+						judge_id: $scope.session.judge_id
+					}
+				})
+				.done(function(data){
+					$scope.teams = data;
+					$scope.$apply();
+				})
+				.fail(function(xhr, textStatus, errorThrown) {
+				    console.log(xhr.responseText);
+				});
 			});
 		}
-
 
 		$scope.setScores = function(team){
 			var sheet_url= '../../database/update_score.php';

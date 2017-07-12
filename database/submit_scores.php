@@ -2,6 +2,9 @@
 	require_once('connection.php');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+		
+
     	$score_id = $_POST['score_id'];
     	$score = $_POST['score'];
 

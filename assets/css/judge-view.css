@@ -353,17 +353,20 @@ header {
 	height: 70px;
 	padding: 0 30px;
 	border: solid 3px #3923ab;
-	transition: all 0.5 ease;
+	transition: all 0.5s ease;
 	margin: 20px 0;
-
 }
 
-#btn-team-name {
-
+.team-btn:hover {
+	background-color: #0e0058;
+	border-color: #0e0058;
+	color: #fff;
 }
 
-#btn-team-score {
-
+.team-btn:focus {
+	background-color: #1b0688;
+	border-color: #1b0688;
+	color: #fff;
 }
 
 .btn-team-row {
@@ -374,6 +377,63 @@ header {
 #team-list {
 	color: #ff8b00;
 }
+
+#team-lbl {
+	font-size: 30px;
+}
+
+#view-btn{
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  150px;
+	transition: background-color 0.5s ease;
+}
+
+#view-btn:hover {
+	background-color: #3923ab;
+}
+
+#dview-btn:focus {
+	background-color: #1b0688;
+}
+
+#team-desc {
+	margin: 0;
+	padding: 10px;
+	border: dotted 2px gray;
+	border-radius: 5px;
+}
+
+#main-sheet {
+	margin: 0;
+	padding: 10px;
+}
+
+#criteria {
+	padding: 0 15px;
+}
+
+#submit-btn{
+	margin-top: 50px;
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#submit-btn:hover {
+	background-color: #3923ab;
+}
+
+#submit-btn:focus {
+	background-color: #1b0688;
+}
+
+
 
 /* Done judging style */
 

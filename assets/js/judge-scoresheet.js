@@ -30,7 +30,7 @@
 		}
 
 		$scope.setScores = function(team){
-			var sheet_url= '../../database/update_score.php';
+			var sheet_url= '../../database/submit_score.php';
 			
 			var success = true;
 
@@ -50,7 +50,7 @@
 				alert("Scores submitted!");
 				$scope.closeTeam(team);
 			}else{
-				alert("Error submitting scovres.");
+				alert("Error submitting scores.");
 			}
 			
 		}		

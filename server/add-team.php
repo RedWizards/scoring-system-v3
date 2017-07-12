@@ -32,6 +32,11 @@
 						<br/>
 					</div>
 					<div>
+						<label for="project_type">Project Type</label>
+						<input type="text" name="project_type" placeholder="..." class="form-control" required/>
+						<br/>
+					</div>
+					<div>
 						<label for="short_desc">Short Description</label>
 						<textarea name="short_desc" placeholder="..." class="form-control" required></textarea>
 						<br/>
@@ -66,24 +71,23 @@
 		        data: formData, // serializes the form's elements.
 		    })
 		    .done(function(data){
-		    	formData.team_id = data.id;
 
-		    	console.log(fornData.team_id);
+		    	formData = formData + "&team_id=" + JSON.parse(data).id + "&event_id=1";
 
-				// $.ajax({
-			 //        type: "POST",
-			 //        url: '../database/add_project.php',
-			 //        data: formData , // serializes the form's elements.
-			 //    })
-			 //    .done(function(data){
-					
-				// 	console.log('Success');
-				// })
-				// .fail(function(xhr, textStatus, errorThrown) {
-				// 	console.log(textStatus);
-				// 	console.log(errorThrown);
-				//     console.log(xhr.responseText);
-				// });
+				$.ajax({
+			        type: "POST",
+			        url: '../database/add_project.php',
+			        data: formData , // serializes the form's elements.
+			    })
+			    .done(function(data){
+			    	console.log(data);
+					alert('Successfully added Team');
+				})
+				.fail(function(xhr, textStatus, errorThrown) {
+					console.log(textStatus);
+					console.log(errorThrown);
+				    console.log(xhr.responseText);
+				});
 
 			})
 			.fail(function(xhr, textStatus, errorThrown) {

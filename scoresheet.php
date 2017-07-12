@@ -39,7 +39,7 @@
 
 						<div ng-hide="activeNow">
 
-							<button type="button" class="btn btn-default team-btn" ng-click="setScore(team)"><span id="btn-team-name" class="pull-left">{{team.team_name |  uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
+							<button type="button" class="btn btn-default team-btn" ng-click="setScore(team)"><span id="btn-team-name" class="pull-left">{{team.team_name | uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
 							
 						</div>
 
@@ -64,7 +64,7 @@
 									</div>
 							</div>
 							
-							<div id="main-sheet" class="text-center">
+							<div id="main-sheet">
 								
 								<h3><i>SCORING SHEET</i></h3>
 
@@ -74,12 +74,12 @@
 									
 									<div class="row" id="criteria">
 
-										<div class="pull-left">
+										<div class="pull-left" style="width: 60%; word-wrap: true;">
 											<span><b>{{criteria.criteria_desc}}</b></span><br/>
 											<small><i>{{criteria.criteria_longdesc}}</i></small>
 										</div>
 															
-										<div class="pull-right">
+										<div class="pull-right" style="width: 30%; word-wrap: true;">
 											<h4><input type="number" class="text-right" name="criteria-{{criteria.criteria_id}}" placeholder="0" max="{{criteria.criteria_weight}}" min="0" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
 										</div>
 
@@ -93,7 +93,7 @@
 
 								<br/><br/>
 								
-								<button id="submit-btn" ng-click="setScores(team)">SUBMIT</button>
+								<button id="submit-btn" ng-click="setScores(team)" style="width: 60%;" class="text-center">SUBMIT</button>
 									
 									
 								<br/>

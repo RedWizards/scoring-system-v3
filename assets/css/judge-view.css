@@ -313,7 +313,7 @@ header {
 
 #section {
 	margin: 0;
-	height: 750px;
+	height: 900px;
 	padding: 30px 0;
 	background-color: #fff;
 }
@@ -413,6 +413,7 @@ header {
 
 #criteria {
 	padding: 0 15px;
+	margin: 20px 0;
 }
 
 #submit-btn{

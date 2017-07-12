@@ -53,20 +53,44 @@
 	<script src="../assets/js/jquery.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		$("#idForm").submit(function(e) {
+		$("#reg-form").submit(function(e) {
 			e.preventDefault(); // avoid to execute the actual submit of the form.
 
-		    var url = "path/to/your/script.php"; // the script where you handle the form input.
+		    var url = "../database/register_team.php"; // the script where you handle the form input.
+
+		    var formData = $("#reg-form").serialize();
 
 		    $.ajax({
 		        type: "POST",
 		        url: url,
-		        data: $("#idForm").serialize(), // serializes the form's elements.
-		        success: function(data)
-		        {
-		            alert(data); // show response from the php script.
-		        }
-		    });
+		        data: formData, // serializes the form's elements.
+		    })
+		    .done(function(data){
+		    	formData.team_id = data.id;
+
+		    	console.log(fornData.team_id);
+
+				// $.ajax({
+			 //        type: "POST",
+			 //        url: '../database/add_project.php',
+			 //        data: formData , // serializes the form's elements.
+			 //    })
+			 //    .done(function(data){
+					
+				// 	console.log('Success');
+				// })
+				// .fail(function(xhr, textStatus, errorThrown) {
+				// 	console.log(textStatus);
+				// 	console.log(errorThrown);
+				//     console.log(xhr.responseText);
+				// });
+
+			})
+			.fail(function(xhr, textStatus, errorThrown) {
+				console.log(textStatus);
+				console.log(errorThrown);
+			    console.log(xhr.responseText);
+			});
 
 		    
 		});

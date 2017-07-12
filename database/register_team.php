@@ -2,6 +2,7 @@
 	require_once('connection.php');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
 		$team_name = $_POST['team_name'];
 
 		$sql = "CALL register_team('".

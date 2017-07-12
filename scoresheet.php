@@ -29,16 +29,24 @@
 				</div>
 			</header>
 			
-			<section ng-controller="sheet-ctrl" ng-init="init()">
+			<div id="section" ng-controller="sheet-ctrl" ng-init="init()">
 
 				<h3 id="team-list" class="text-center">TEAM LIST</h3>
 
-				<div class="col-md-offset-3 col-md-6" ng-repeat="team in teams">
-					
-					<div class="btn-team-row">
-							<button type="button" class="btn btn-default team-btn"><span id="btn-team-name" class="pull-left">{{team.team_name |  uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
-					</div>
+				<div class="col-md-offset-3 col-md-6" >
 
+					<div ng-repeat="team in teams">
+					<!--
+					<div class="btn-team-row">
+					-->
+							<button type="button" class="btn btn-default team-btn"><span id="btn-team-name" class="pull-left">{{team.team_name |  uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
+							
+
+					</div>
+					<!--
+					</div>
+					-->
+					
 					<!--
 					<div ng-repeat="team in teams">
 						
@@ -202,12 +210,12 @@
 					-->
 				</div>
 
-			</section>
+			</div>
 			
 			
-			<footer class="text-center">
+			<div id="footer" class="text-center">
 				<small class="sub">POWERED BY</small><br/><strong>RED Wizard Events Management</strong><br/>&copy; 2017
-			</footer>
+			</div>
 			
 	</body>
 

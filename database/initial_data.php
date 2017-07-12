@@ -3,7 +3,7 @@
 	require_once('connection.php');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    	$event_id = 1;
+    	$event_id = $_GET['event_id'];
     	$judge_id = $_GET['judge_id'];
 
     	//array variables
@@ -34,13 +34,10 @@
 		if($result){
 		    // Cycle through results
 		    while ($row = $result->fetch_object()){
-
 		    	//convert criteria_id to int
 		    	$row->criteria_id = intval($row->criteria_id);
-
 		    	//convert criteria_weight to float
 				$row->criteria_weight = floatval($row->criteria_weight);
-
 		        array_push($criterias,$row);
 		    }
 		    // Free result set
@@ -49,37 +46,38 @@
 		}
 
 
-		$temp_teams = $teams;	//transfer data to a temporary variable
-		$teams = [];			//reset $teams
-		//loop through teams
-		foreach($temp_teams as $team){
 
-			$team_id = $team->team_id;
+		// $temp_teams = $teams;	//transfer data to a temporary variable
+		// $teams = [];			//reset $teams
+		// //loop through teams
+		// foreach($temp_teams as $team){
 
-			//Query all members
-			$sql = "CALL view_members(".$team_id.")";
-			$result = $conn->query($sql);
-			if($result){
-    			$members = array();
+		// 	$team_id = $team->team_id;
 
-			    // Cycle through results
-			    while ($row = $result->fetch_object()){
+		// 	//Query all members
+		// 	$sql = "CALL view_members(".$team_id.")";
+		// 	$result = $conn->query($sql);
+		// 	if($result){
+  //   			$members = array();
 
-			    	//convert member_id to int
-			   		$row->participant_id = intval($row->participant_id);
+		// 	    // Cycle through results
+		// 	    while ($row = $result->fetch_object()){
 
-			        array_push($members, $row);
-			    }
+		// 	    	//convert member_id to int
+		// 	   		$row->participant_id = intval($row->participant_id);
 
-			    $team->members = $members;
+		// 	        array_push($members, $row);
+		// 	    }
 
-			    // Free result set
-			    $result->close();
-			    $conn->next_result();
-			}
+		// 	    $team->members = $members;
 
-			array_push($teams, $team);
-		}
+		// 	    // Free result set
+		// 	    $result->close();
+		// 	    $conn->next_result();
+		// 	}
+
+		// 	array_push($teams, $team);
+		// }
 
 		//Set team score_details
 		$temp_teams = array();
@@ -103,7 +101,7 @@
 					$row->score = floatval($row->score);
 
 					if($row->score == 0){
-						$row->score = null;
+						$row->score_id = null;
 					}
 
 				    $total += $row->score;

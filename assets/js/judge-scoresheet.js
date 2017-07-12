@@ -20,7 +20,7 @@
 					}
 				})
 				.done(function(data){
-					console.log(data);
+					
 					$scope.teams = data;
 					$scope.$apply();
 				})
@@ -36,20 +36,21 @@
 
 			for(var i = 0; i < team.criteria.length; i++){
 
+				console.log(team.criteria[i]);
 				if((team.criteria[i].score_details.score_id == null) || (team.criteria[i].score_details.score_id == 0)){
 					//add scores
 					$.ajax({
 						method: 'post',
-						url: '../../database/submit_score.php',
+						url: '././database/submit_score.php',
 						data:{
 							judge_id: $scope.session.judge_id,
-							criteria_id: team.criteria[i].id,
+							criteria_id: team.criteria[i].criteria_id,
 							project_id: team.project_id,
 							score: team.criteria[i].score_details.score
 						}
 					})
 					.done(function(data){
-						team.criteria[i].score_details.score_id = data.id;
+						console.log(data);
 					})
 					.fail(function(xhr, textStatus, errorThrown) {
 					    console.log(xhr.responseText);
@@ -60,7 +61,7 @@
 					//update scores
 					$.ajax({
 						method: 'post',
-						url: '../../database/update_scores.php',
+						url: '././database/update_scores.php',
 						data:{
 							score_id: team.criteria[i].score_details.score_id,
 							score: team.criteria[i].score_details.score

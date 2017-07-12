@@ -31,62 +31,31 @@
 			
 			<div id="section" ng-controller="sheet-ctrl" ng-init="init()">
 
-				<h3 id="team-list" class="text-center">TEAM LIST</h3>
+				<h3 id="team-list" class="text-center" ng-hide="activeNow">TEAM LIST</h3>
 
 				<div class="col-md-offset-3 col-md-6" >
 
 					<div ng-repeat="team in teams">
-					<!--
-					<div class="btn-team-row">
-					-->
-							<button type="button" class="btn btn-default team-btn"><span id="btn-team-name" class="pull-left">{{team.team_name |  uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
-							
 
-					</div>
-					<!--
-					</div>
-					-->
-					
-					<!--
-					<div ng-repeat="team in teams">
-						
 						<div ng-hide="activeNow">
-						
-							<div class="row" id="sheet-panel" class="text-center">
-								<button class="btn btn-primary col ng-click="setScore(team)">
-									<div class="row">
-										<div class="col-x" id="col-lbl">
-											<span>{{team.team_name | uppercase}}</span>
-										</div>
-										<div class="col-md-3 team-score" id="col-lbl">
-											<span><b>{{team.total}} %</b></span>
-										</div>
-										
-									</div>
-								</button>
-							</div>
 
-						
+							<button type="button" class="btn btn-default team-btn" ng-click="setScore(team)"><span id="btn-team-name" class="pull-left">{{team.team_name |  uppercase}}</span> <span id="btn-team-score" class="pull-right"><b>{{team.total}} %</b></span></button>
+							
 						</div>
-						
-					</div>
-					-->
-						<!--
+
 						<div ng-show="team.isActive" id="team-board">				
 							
 							<div class="row">
 								
-								<div class="col-md-12">
+								<div>
 									<button class="view-btn pull-left" ng-click="closeTeam(team)"><span class="glyphicon glyphicon-chevron-left"></span> View All Teams</button>
 								</div>
 								
 							</div>
 							
-							
-							<div class="row team-desc">
+							<div class="text-center">
 								<span id="team-lbl"><small style="color:darkgray;">TEAM </small>{{team.team_name | uppercase}}</span>
 							</div>
-						
 						
 							<div class="row">
 							
@@ -106,7 +75,6 @@
 											<p><b>DEVELOPERS</b></p>
 
 											<ul>
-												
 												<li ng-repeat="member in team.members">
 													{{member.participant_firstName}} {{member.participant_lastName}}
 												</li>
@@ -202,12 +170,11 @@
 						</div>
 					
 					</div>
+					
 					<div class="text-center" ng-hide="activeNow">
 						<a href="./helpers/logout.php"><button id="done-btn">DONE</button></a>
 					</div>
-					
-					
-					-->
+
 				</div>
 
 			</div>

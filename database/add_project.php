@@ -2,12 +2,15 @@
 	require_once('connection.php');
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			echo(json_encode($_POST));
     	$team_id = $_POST['team_id'];
     	$event_id = $_POST['event_id'];
 		$project_name = $_POST['project_name'];
 		$project_type = $_POST['project_type'];
-		$short_description =$_POST['short_description'];
-		$long_description =$_POST['long_description'];
+		$short_description = $_POST['short_desc'];
+		$long_description = $_POST['long_desc'];
+
+
 
 		$sql = "CALL add_project(".
 			$team_id.",".

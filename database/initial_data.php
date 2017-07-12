@@ -103,7 +103,7 @@
 					}
 					else{
 						$score = array();
-						$score['score_id'] = 0;
+						$score['score_id'] = null;
 						$score['score'] = 0;
 
 						$row = (object) $score;

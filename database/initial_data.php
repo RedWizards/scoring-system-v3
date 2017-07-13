@@ -104,7 +104,7 @@
 					else{
 						$score = array();
 						$score['score_id'] = null;
-						$score['score'] = 0;
+						$score['score'] = "";
 
 						$row = (object) $score;
 					}

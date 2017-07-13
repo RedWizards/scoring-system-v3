@@ -19,6 +19,8 @@
 
 			<h3>TEAM REGISTRATION</h3><br/><br/>
 
+			<a href="./index.php">Score Board</a>
+
 			<div>
 				<form id="reg-form">
 					<div>
@@ -80,8 +82,8 @@
 			        data: formData , // serializes the form's elements.
 			    })
 			    .done(function(data){
-			    	console.log(data);
 					alert('Successfully added Team');
+					$("#reg-form").trigger("reset");
 				})
 				.fail(function(xhr, textStatus, errorThrown) {
 					console.log(textStatus);

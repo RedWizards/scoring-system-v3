@@ -484,3 +484,7 @@ header {
          -o-animation-name: bounce; /* Opera < 12.1 */
             animation-name: bounce;
 }
+
+input{
+	text-transform: capitalize;
+}

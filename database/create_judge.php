@@ -11,12 +11,10 @@
 			$row = $result->fetch_assoc();
 
 			session_start();
-			if (!isset($_SESSION['judge_id'])) {
-				$_SESSION['judge_id'] = $row['id'];
-				$_SESSION['registered'] = true;
-			}
+			$_SESSION['judge_id'] = $row['id'];
+			$_SESSION['finished'] = false;
 			
-			echo(json_encode($row));
+			header('Location: ../scoresheet.php');
 
 			$result->free();
 		}

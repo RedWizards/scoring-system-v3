@@ -1,4 +1,5 @@
-<?php require("helpers/judging-checker.php"); ?>
+<?php require('./helpers/route-index.php');
+?>
 
 <!doctype html>
 <html>
@@ -50,7 +51,7 @@
 					<td>
 						<a class="btn btn-simple" id="closeRegBtn" href="javascript:regJudgeClose()">&times;</a>
 						<div id="p4" class="text-center">
-							<p id="welcome-judge">JUDGE REGISTRATION</h3>
+							<p id="welcome-judge">WELCOME</h3>
 							<!--
 							<small class="sub">Please enter your name</small>
 							-->

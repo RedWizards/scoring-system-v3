@@ -13,11 +13,13 @@
 			$project_id."','".
 			$score."')";
 
-		if(!$conn->query($sql)){
-			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
+		if($result = $conn->query($sql)){
+			$row = $result->fetch_assoc();
+			echo(json_encode($row));
+			$result->free();
 		}
 		else{
-			echo("Success!");
+			echo "CALL failed: ( ".$conn->errno." ) " . $conn->error;
 		}
 	}
 	else{

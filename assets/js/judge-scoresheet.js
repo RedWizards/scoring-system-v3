@@ -20,27 +20,12 @@
 					}
 				})
 				.done(function(data){
-		
 					$scope.teams = data;
 					$scope.$apply();
 				})
 				.fail(function(xhr, textStatus, errorThrown) {
 				    console.log(xhr.responseText);
 				});
-			});
-		}
-
-		var addScore = function(judge, criteria, project, score){
-			return $.ajax({
-				method: 'post',
-				url: '././database/submit_score.php',
-				async: false,
-				data:{
-					judge_id: judge,
-					criteria_id: criteria,
-					project_id: project,
-					score: score
-					}
 			});
 		}
 
@@ -52,11 +37,19 @@
 
 				if((team.criteria[i].score_details.score_id == null) || (team.criteria[i].score_details.score_id == 0)){
 					//add scores
-					var promise = addScore($scope.session.judge_id,team.criteria[i].criteria_id,eam.project_id,team.criteria[i].score_details.score);
-					promise.success(function(){
-						team.criteria[i].score_details.score_id = data.id;
-					})
-					console.log(team.criteria[i].score_details);
+					var response = $.ajax({
+						method: 'post',
+						url: '././database/submit_score.php',
+						data:{
+							judge_id: $scope.session.judge_id,
+							criteria_id: team.criteria[i].criteria_id,
+							project_id: team.project_id,
+							score: team.criteria[i].score_details.score
+						}, 
+						async: false
+					}).responseText;
+
+					team.criteria[i].score_details.score_id = parseInt(JSON.parse(response).id);
 				}
 				else{
 					//update scores
@@ -81,7 +74,8 @@
 			}else{
 				alert("Error submitting scores.");
 			}
-			
+
+			console.log($scope.teams);
 		}		
 		
 		$scope.updateScore = function(team) {

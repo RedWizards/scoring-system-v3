@@ -33,6 +33,10 @@
 						</div>
 									
 						<div id="p2" class="text-center">
+
+							<small id="note">CLICK ANYWHERE TO CONTINUE</small>
+							<br/><br/><br/>
+
 							<small class="sub">POWERED BY</small><br/>
 							<span id="company"><strong>RED Wizard Events Management</strong></span><br/>
 							<small class="sub"><i>Created by </i></small>

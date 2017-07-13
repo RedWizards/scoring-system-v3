@@ -1,63 +1,72 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html ng-app="createCriteria">
 
-	<head>
+    <head>
+        <title>Add Criteria</title>
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/criteria.css">
+        <script src='../assets/js/angular.min.js'></script>
+        <script src="../assets/js/jquery.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/criteria.js"></script>
+    </head>
 
-		<title>UHAC Cebu</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="../assets/images/uhac.ico" type="image/ico" sizes="32x32">
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-		<script src="../assets/js/angular.min.js"></script>
-		<script src="../assets/js/angular-animate.js"></script>
-		<script src="../assets/js/angular-route.js"></script>
+    <body ng-controller="criteriaCtrl">
 
-	</head>
+        <div class="col-md-4">
 
-	<body>
+            <h1 class="text-center">ADD CRITERIA</h1>
+            <br/>
+            
+            <form name="criteriaForm" ng-submit="addCriteria">
 
-		<div style="margin: 50px;">
+                <div class="criteria_div">
+                    <label for="criteria_name">Criteria Name</label><br/>
+                    <input type="text" name="criteria_name" ng-model="new_name" id="criteria_name" required/>
+                </div>
 
+                <div class="criteria_div">
+                    <label for="criteria_weight">Criteria Weight</label><br/>
+                    <input type="number" name="criteria_weight" ng-model="new_weight" id="criteria_weight" required/><br/>
+                </div>
 
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-					<h3>CREATE CRITERIA</h3><br/><br/>
-					<form action="" method="">
-						<div>
-							<label for="criteria_desc">Name </label>
-							<input type="text" name="criteria_desc" placeholder="..." class="form-control" required/>
-							<br/>
-						</div>
-						<div>
-							<label for="criteria_weight">Weight / Value</label>
-							<input type="number" name="criteria_weight" placeholder="..." class="form-control" required/>
-							<br/>
-						</div>
-						<div>
-							<label for="criteria_longdesc">Description </label>
-							<textarea name="criteria_longdesc" placeholder="..." class="form-control" required/></textarea>
-							<br/>
-						</div>
-						<input type="submit" value="ADD CRITERIA" name="submit_criteria" class="form-control btn btn-primary" style="width: 300px;" />
-					</form>
-				</div>
+                <div class="criteria_div">
+                    <label for="criteria_desc">Criteria Description</label></br/>
+                    <textarea type="text" name="criteria_desc" ng-model="new_desc" id="criteria_desc" required/></textarea><br/>
+                </div>
 
-				<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6 text-center" style="border: dotted 3px #000; height: 500px;">
+                <div class="criteria_div text-right">
+                    <input rows="4" ng-disabled="criteriaForm.$invalid" ng-click="addCriteria()" class="btn btn-primary btn-submit" type="submit" value="ADD">
+                </div>
+            </form>
 
-					<h3>CREATED CRITERIA</h3>
-					<br/>
-					<br/>
+        </div>
+            
+        <div class="col-md-6" id="criteria-output">
 
-					
-					
-				</div>
+            <h1 class="text-center">EVENT CRITERIA</h1>
+            <br/>
 
-			</div>
+            <h4 ng-show="!criterias.length" class="text-center"><i>~ No criterias ~</i></h4>
 
-		</div>
-			
-	</body>
+            <ul>
+                <li ng-repeat="criteria in criterias" class="{'fadeOut' : criteria.done}">
+                    <div class="container-fluid" id="criteria-element">
+                        <span ng-click="deleteCriteria($index)" class="btn btn-danger pull-right">&times;</span>
+                        <p>NAME: {{criteria.name}}</span>
+                        <p>WEIGHT: {{criteria.weight}}</span>
+                        <p>DESCRIPTION: {{criteria.desc}}</p> 
+                    </div>
+                </li>
+            </ul>
 
-	<script src="../assets/js/jquery.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
+            <br/>
+            <br/>
+            <p class="text-center"><button ng-class="{'disabled': criterias.length==0}" class="btn btn-primary" ng-click="submitCriteria()">SUBMIT</button>
+            </p>
+
+        </div>
+
+    </body>
 
 </html>

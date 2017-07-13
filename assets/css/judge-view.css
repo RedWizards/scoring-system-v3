@@ -123,7 +123,7 @@ html, body, #wrapper {
 	width: 20em;
 	height: 80px;
 	position: absolute;
-	top: 90%;
+	top: 85%;
 	left: 50%;
 	margin-top: -8em;
 	margin-left: -10em;
@@ -194,7 +194,7 @@ input {
 	width: 20em;
 	height: 20em;
 	position: absolute;
-	top: 70%;
+	top: 65%;
 	left: 50%;
 	margin-top: -10em;
 	margin-left: -10em;
@@ -205,7 +205,7 @@ input {
 	height: 20em;
 	overflow: hidden;
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 50%;
 	margin-top: -10em;
 	margin-left: -10em;
@@ -256,10 +256,10 @@ input {
         -webkit-transition: width 500ms ease;
         */
  	background: -webkit-radial-gradient(center, #BF4D00, #E52A00);
-background: -moz-radial-gradient(center, #BF4D00, #E52A00);
-background: -o-radial-gradient(center, #BF4D00, #E52A00);
-background: -ms-radial-gradient(center, #BF4D00, #E52A00);
-background: radial-gradient(center, #BF4D00, #E52A00);
+	background: -moz-radial-gradient(center, #BF4D00, #E52A00);
+	background: -o-radial-gradient(center, #BF4D00, #E52A00);
+	background: -ms-radial-gradient(center, #BF4D00, #E52A00);
+	background: radial-gradient(center, #BF4D00, #E52A00);
 
 	    height: 100%;
     width: 100%;
@@ -298,6 +298,37 @@ background: radial-gradient(center, #BF4D00, #E52A00);
 
 #closeRegBtn:hover {
 	color: gray;
+}
+
+#note {
+	color: #fff;
+}
+
+#note {
+	-webkit-animation: blinker 1s linear infinite; /* Safari, Chrome and Opera > 12.1 */
+	   -moz-animation: blinker 1s linear infinite; /* Firefox < 16 */
+        -ms-animation: blinker 1s linear infinite; /* Internet Explorer */
+         -o-animation: blinker 1s linear infinite; /* Opera < 12.1 */
+            animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes blinker {  
+  50% { opacity: 0; }
 }
 
 

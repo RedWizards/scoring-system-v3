@@ -11,7 +11,7 @@
         <script src="../assets/js/criteria.js"></script>
     </head>
 
-    <body ng-controller="criteriaCtrl">
+    <body ng-controller="criteriaCtrl" ng-init="init()">
 
         <div class="col-md-4">
 
@@ -51,11 +51,11 @@
 
             <ul>
                 <li ng-repeat="criteria in criterias" class="{'fadeOut' : criteria.done}">
-                    <div class="container-fluid" id="criteria-element">
+                    <div class="container-fluid" id="criteria-element-{{}}">
                         <span ng-click="deleteCriteria($index)" class="btn btn-danger pull-right">&times;</span>
-                        <p>NAME: {{criteria.name}}</span>
-                        <p>WEIGHT: {{criteria.weight}}</span>
-                        <p>DESCRIPTION: {{criteria.desc}}</p> 
+                        <p>NAME: {{criteria.criteria_desc}}</span>
+                        <p>WEIGHT: {{criteria.criteria_weight}}</span>
+                        <p>DESCRIPTION: {{criteria.criteria_desc}}</p> 
                     </div>
                 </li>
             </ul>

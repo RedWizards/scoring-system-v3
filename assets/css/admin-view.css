@@ -1,4 +1,4 @@
-html, body, #wrapper {
+html, body {
 	height:100%;
     width: 100%;
     margin: 0;
@@ -6,333 +6,8 @@ html, body, #wrapper {
     border: 0;
 	font-family: Helvetica;
 	
-	background: -webkit-radial-gradient(center, #BF4D00, #E52A00);
-	background: -moz-radial-gradient(center, #BF4D00, #E52A00);
-	background: -o-radial-gradient(center, #BF4D00, #E52A00);
-	background: -ms-radial-gradient(center, #BF4D00, #E52A00);
-	background: radial-gradient(center, #BF4D00, #E52A00);
+	background: #111111;
 }
-
-/* Judge Landing Style */
-	
-#wrapper td {
-    vertical-align: middle;
-    text-align: center;
-}
-
-#center-logo, #p1, #p2, #p3, #p4, #thanks {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-}
-		
-#center-logo {
-	background: url(../images/uhaclogo.png) center;
-	background-color: white;
-    width: 150px;
-    height: 150px;
-    position: relative;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-	margin-top: -75px;
-	margin-left: -75px;
-	border-radius: 50%;
-	border: 0.5em solid gray;		
-
-	-webkit-transition: background-color 1s ease, border-color 1s ease, transform 1s ease; /* Safari, Chrome and Opera > 12.1 */
-       -moz-transition: background-color 1s ease, border-color 1s ease, transform 1s ease; /* Firefox < 16 */
-        -ms-transition: background-color 1s ease, border-color 1s ease, transform 1s ease; /* Internet Explorer */
-         -o-transition: background-color 1s ease, border-color 1s ease, transform 1s ease; /* Opera < 12.1 */
-            transition: background-color 1s ease, border-color 1s ease, transform 1s ease;
-
-}
-		
-#center-logo:hover {
-	background: url(../images/uhaclogo2.png) center;
-	/*background: url(../images/uhaclogo2.png) center;*/
-	background-color: #ffffff;
-	/*border-color: #000000;*/
-	border-color: #000083;	
-
-	-webkit-transform: rotate(720deg); /* Safari, Chrome and Opera > 12.1 */
-       -moz-transform: rotate(720deg); /* Firefox < 16 */
-        -ms-transform: rotate(720deg); /* Internet Explorer */
-         -o-transform: rotate(720deg); /* Opera < 12.1 */
-            transform: rotate(720deg);
-}
-
-#event-name {
-	color: white;
-	word-wrap: break-word;
-
-    -webkit-animation-duration: 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-duration: 1s; /* Firefox < 16 */
-        -ms-animation-duration: 1s; /* Internet Explorer */
-         -o-animation-duration: 1s; /* Opera < 12.1 */
-            animation-duration: 1s;
-
-    -webkit-animation-fill-mode: both; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-fill-mode: both; /* Firefox < 16 */
-        -ms-animation-fill-mode: both; /* Internet Explorer */
-         -o-animation-fill-mode: both; /* Opera < 12.1 */
-            animation-fill-mode: both;   
-
-	-webkit-animation-timing-function: ease-in-out; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-timing-function: ease-in-out; /* Firefox < 16 */
-        -ms-animation-timing-function: ease-in-out; /* Internet Explorer */
-         -o-animation-timing-function: ease-in-out; /* Opera < 12.1 */
-            animation-timing-function: ease-in-out;  
-
-	-webkit-animation-iteration-count: infinite; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-iteration-count: infinite; /* Firefox < 16 */
-        -ms-animation-iteration-count: infinite; /* Internet Explorer */
-         -o-animation-iteration-count: infinite; /* Opera < 12.1 */
-            animation-iteration-count: infinite; 
-}
-
-#event-name:hover {
-	cursor: pointer;
-    -webkit-animation-name: bounce; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-name: bounce; /* Firefox < 16 */
-        -ms-animation-name: bounce; /* Internet Explorer */
-         -o-animation-name: bounce; /* Opera < 12.1 */
-            animation-name: bounce; 
-}
-
-#system-name {
-	color: white;
-	word-wrap: break-word;
-}
-
-#p1 {
-	width: 20em;
-	height: 80px;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin-top: -10em;
-	margin-left: -10em;
-	transition: 0.3s;
-	opacity: 1;
-}
-
-#p2 {
-	width: 20em;
-	height: 80px;
-	position: absolute;
-	top: 85%;
-	left: 50%;
-	margin-top: -8em;
-	margin-left: -10em;
-	transition: 0.3s;
-	opacity: 1;
-}
-
-.sub {
-	color: lightgray;
-	word-wrap: break-word;
-}
-
-#company, #dev-grp {
-	color: white;
-	word-wrap: break-word;
-}
-
-
-@keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
-	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Judge Registration Style */
-
-input {
-	border-radius: 0;
-	/*background-color: blue;*/
-}
-
-#p3 {
-	width: 20em;
-	height: 20em;
-	position: absolute;
-	top: 65%;
-	left: 50%;
-	margin-top: -10em;
-	margin-left: -10em;
-}
-
-#p4 {
-	width: 20em;
-	height: 20em;
-	overflow: hidden;
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	margin-top: -10em;
-	margin-left: -10em;
-}
-
-#register-button, #input-container {
-	height: 50px;
-}
-
-#register-button {
-	color: #fff;
-	background-color: #0e0058;
-	border:  solid 2px #fff;
-	width:  120px;
-	transition: background-color 0.5s ease;
-}
-
-#register-button:hover {
-	background-color: #3923ab;
-}
-
-#register-button:focus {
-	background-color: #1b0688;
-}
-
-#input-container {
-	background-color: #fff;
-	border-radius: 0;
-}
-
-#welcome-judge {
-	color: #fff;
-	font-size: 20px;
-}
-
-
-/* Landing Page for scoring-system-v3 */
-
-#event-cover {
-/*	width: 100%;
-	height: 100%;
-	z-index: 10;
-	background-color: green;
-	transition:             width 500ms ease;
-        -moz-transition:    width 500ms ease;
-        -ms-transition:     width 500ms ease;
-        -o-transition:      width 500ms ease;
-        -webkit-transition: width 500ms ease;
-        */
- 	background: -webkit-radial-gradient(center, #BF4D00, #E52A00);
-	background: -moz-radial-gradient(center, #BF4D00, #E52A00);
-	background: -o-radial-gradient(center, #BF4D00, #E52A00);
-	background: -ms-radial-gradient(center, #BF4D00, #E52A00);
-	background: radial-gradient(center, #BF4D00, #E52A00);
-
-	    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: green;
-    overflow-x: hidden;
-    transition: 0.5s;
-    text-align: center;
-
-
-}
-
-#register-judge {
-	width: 100%;
-	height: 100%;
-	/* z-index: 12;
-	position: fixed;
-	*/
-	background-color: #111111;
-}
-
-#closeRegBtn {
-	color: #ffffff;
-	padding: 0;
-	margin: 10px;
-	transition: 0.5s;
-	
-	position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 30px;
-}
-
-#closeRegBtn:hover {
-	color: gray;
-}
-
-#note {
-	color: #fff;
-}
-
-#note {
-	-webkit-animation: blinker 1s linear infinite; /* Safari, Chrome and Opera > 12.1 */
-	   -moz-animation: blinker 1s linear infinite; /* Firefox < 16 */
-        -ms-animation: blinker 1s linear infinite; /* Internet Explorer */
-         -o-animation: blinker 1s linear infinite; /* Opera < 12.1 */
-            animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {  
-  50% { opacity: 0; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes blinker {  
-  50% { opacity: 0; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes blinker {  
-  50% { opacity: 0; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes blinker {  
-  50% { opacity: 0; }
-}
-
-
-/* Judge Scoresheet */
 
 header {
 	margin: 0;
@@ -340,13 +15,6 @@ header {
 	height: 50px;
 	background-color: #564c89;
 	background-image: url("../images/header.png");
-}
-
-#section {
-	margin: 0;
-	height: 900px;
-	padding: 30px 0;
-	background-color: #fff;
 }
 
 #footer {
@@ -361,161 +29,38 @@ header {
 	color: #fff;
 }
 
-#done-btn{
-	margin-top: 50px;
-	height: 50px;
-	color: #fff;
-	background-color: #0e0058;
-	border:  solid 2px #fff;
-	width:  120px;
-	transition: background-color 0.5s ease;
-}
-
-#done-btn:hover {
-	background-color: #3923ab;
-}
-
-#done-btn:focus {
-	background-color: #1b0688;
-}
-
-.team-btn {
+.row {
+	margin: 0;
+	padding: 50px 0 150px 0;
 	width: 100%;
-	height: 70px;
-	padding: 0 30px;
-	border: solid 3px #3923ab;
+	background-color: #fff;
+}
+
+.inside-option {
+	height: 250px;
+	background-color: #fff;
+	color: #564c89;
 	transition: all 0.5s ease;
-	margin: 20px 0;
 }
 
-.team-btn:hover {
-	background-color: #0e0058;
-	border-color: #0e0058;
+.inside-option:hover {
 	color: #fff;
+	background-color: #564c89;
 }
 
-.team-btn:focus {
-	background-color: #1b0688;
-	border-color: #1b0688;
-	color: #fff;
-}
-
-.btn-team-row {
-	padding: 0 20px;
-	margin: 20px 0;
-}
-
-#team-list {
-	color: #ff8b00;
-}
-
-#team-lbl {
-	font-size: 30px;
-}
-
-#view-btn{
-	height: 50px;
-	color: #fff;
-	background-color: #0e0058;
-	border:  solid 2px #fff;
-	width:  150px;
-	transition: background-color 0.5s ease;
-}
-
-#view-btn:hover {
-	background-color: #3923ab;
-}
-
-#dview-btn:focus {
-	background-color: #1b0688;
-}
-
-#team-desc {
+.option-outline {
 	margin: 0;
-	padding: 10px;
-	border: dotted 2px gray;
-	border-radius: 5px;
+	padding: 0;
 }
 
-#main-sheet {
-	margin: 0;
-	padding: 10px;
+a {
+	text-decoration: none;
 }
 
-#criteria {
-	padding: 0 15px;
-	margin: 20px 0;
+a:hover {
+	text-decoration: none;
 }
 
-#submit-btn{
-	margin-top: 50px;
-	height: 50px;
-	color: #fff;
-	background-color: #0e0058;
-	border:  solid 2px #fff;
-	width:  120px;
-	transition: background-color 0.5s ease;
-}
-
-#submit-btn:hover {
-	background-color: #3923ab;
-}
-
-#submit-btn:focus {
-	background-color: #1b0688;
-}
-
-
-
-/* Done judging style */
-
-#thanks {
-	width: 20em;
-	height: 20em;
-	position: absolute;
-	top: 63%;
-	left: 50%;
-	margin-top: -10em;
-	margin-left: -10em;
-	transition: 0.3s;    
-}
-
-#greet {
-	color: white;
-	word-wrap: break-word;
-
-    -webkit-animation-duration: 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-duration: 1s; /* Firefox < 16 */
-        -ms-animation-duration: 1s; /* Internet Explorer */
-         -o-animation-duration: 1s; /* Opera < 12.1 */
-            animation-duration: 1s;
-
-    -webkit-animation-fill-mode: both; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-fill-mode: both; /* Firefox < 16 */
-        -ms-animation-fill-mode: both; /* Internet Explorer */
-         -o-animation-fill-mode: both; /* Opera < 12.1 */
-            animation-fill-mode: both;   
-
-	-webkit-animation-timing-function: ease-in-out; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-timing-function: ease-in-out; /* Firefox < 16 */
-        -ms-animation-timing-function: ease-in-out; /* Internet Explorer */
-         -o-animation-timing-function: ease-in-out; /* Opera < 12.1 */
-            animation-timing-function: ease-in-out;  
-
-	-webkit-animation-iteration-count: infinite; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-iteration-count: infinite; /* Firefox < 16 */
-        -ms-animation-iteration-count: infinite; /* Internet Explorer */
-         -o-animation-iteration-count: infinite; /* Opera < 12.1 */
-            animation-iteration-count: infinite; 
-
-
-    -webkit-animation-name: bounce; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation-name: bounce; /* Firefox < 16 */
-        -ms-animation-name: bounce; /* Internet Explorer */
-         -o-animation-name: bounce; /* Opera < 12.1 */
-            animation-name: bounce;
-}
-
-input{
-	text-transform: capitalize;
+span.option-title {
+	margin-top: 100px;
 }

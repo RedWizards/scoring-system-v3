@@ -1,3 +1,5 @@
+<?php require_once('../helpers/admin-security.php');?>
+
 <!doctype html>
 <html>
 

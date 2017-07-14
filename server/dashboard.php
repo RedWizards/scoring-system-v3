@@ -1,3 +1,5 @@
+<?php require_once('../helpers/admin-security.php');?>
+
 <!doctype html>
 <html>
 
@@ -68,6 +70,14 @@
 							<a href="javascript:reset()">
 								<div class="inside-option">
 									<span class="option-title">RESET</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center option-outline">
+							<a href="./logout.php">
+								<div class="inside-option">
+									<span class="option-title">LOG OUT</span>
 								</div>
 							</a>
 						</div>

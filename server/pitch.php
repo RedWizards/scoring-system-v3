@@ -1,3 +1,5 @@
+<?php require_once('../helpers/admin-security.php');?>
+
 <!DOCTYPE html>
 <html ng-app="teams">
 

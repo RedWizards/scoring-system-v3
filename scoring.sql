@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 13, 2017 at 04:09 PM
+-- Generation Time: Jul 14, 2017 at 05:52 PM
 -- Server version: 5.6.26-log
 -- PHP Version: 7.0.4
 
@@ -332,6 +332,13 @@ CREATE TABLE `event` (
   `event_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`event_id`, `event_name`, `event_host`, `event_desc`, `event_date`) VALUES
+(1, 'UHAC Cebu', 'Unionbank', 'Another project of the Bank to find the most creative and innovative solutions in the digital world.', '2017-07-16 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -489,7 +496,7 @@ ALTER TABLE `criteria`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `judge`
 --

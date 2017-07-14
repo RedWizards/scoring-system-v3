@@ -129,7 +129,9 @@
 		array_unshift($total_scores,"Total*");
 		array_unshift($average,"Average**");
 
+
 		fputcsv($output, ["",""]);
+		fputcsv($output, ["Number of Complete Scores: $complete_scores",""]);
 		fputcsv($output, ($total_scores));  
 		fputcsv($output, ($average));
 

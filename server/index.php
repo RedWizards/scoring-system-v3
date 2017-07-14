@@ -32,7 +32,7 @@
 
 					<div>
 						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
-							<a href="create-criteria.php">
+							<a href="criteria.php">
 								<div class="inside-option">
 									<span class="option-title">CREATE CRITERIA</span>
 								</div>
@@ -40,7 +40,7 @@
 						</div>
 
 						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
-							<a href="add-team.php">
+							<a href="team.php">
 								<div class="inside-option">
 									<span class="option-title">ADD TEAM</span>
 								</div>

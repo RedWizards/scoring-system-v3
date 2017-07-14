@@ -91,7 +91,7 @@
 
 									<br/><br/>
 									
-									<input type="submit" value="submit" id="submit-btn" ng-click="setScores(team)" style="width: 60%;" class="text-center">
+									<input type="submit" value="submit" id="submit-btn" ng-click="setScores(team)" class="text-center">
 										
 										
 									<br/>

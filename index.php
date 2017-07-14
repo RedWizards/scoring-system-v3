@@ -33,9 +33,9 @@
 						</div>
 									
 						<div id="p2" class="text-center">
-
+							<br/>
 							<small id="note">CLICK ANYWHERE TO CONTINUE</small>
-							<br/><br/><br/>
+							<br/><br/>
 
 							<small class="sub">POWERED BY</small><br/>
 							<span id="company"><strong>RED Wizard Events Management</strong></span><br/>

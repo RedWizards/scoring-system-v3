@@ -47,12 +47,12 @@
             <h1 class="text-center">EVENT CRITERIA</h1>
             <br/>
 
-            <h4 ng-show="!criterias.length" class="text-center"><i>~ No criterias ~</i></h4>
+            <h4 ng-show="!criterias.length" class="text-center"><i> NO CRITERIAS </i></h4>
 
             <ul>
                 <li ng-repeat="criteria in criterias" class="{'fadeOut' : criteria.done}">
-                    <div class="container-fluid" id="criteria-element-{{}}">
-                        <span ng-click="deleteCriteria($index)" class="btn btn-danger pull-right">&times;</span>
+                    <div class="container-fluid" id="criteria-element-{{criteria.criteria_id}}">
+                        <span ng-click="deleteCriteria($index, criteria.criteria_id)" class="btn btn-danger pull-right">&times;</span>
                         <p>NAME: {{criteria.criteria_desc}}</span>
                         <p>WEIGHT: {{criteria.criteria_weight}}</span>
                         <p>DESCRIPTION: {{criteria.criteria_desc}}</p> 

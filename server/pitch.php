@@ -4,7 +4,7 @@
 <html ng-app="teams">
 
     <head>
-        <title>Pitching Order</title>
+        <title>Order of Pitching</title>
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/css/criteria.css">
         <link rel="stylesheet" href="../assets/css/admin-view.css">
@@ -27,7 +27,7 @@
             <span class="pull-left">
                 <a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
             </span>
-            <h2 class="text-center">PITCHING <strong>ORDER</strong></h2>
+            <h2 class="text-center">ORDER OF <strong>PITCHING</strong></h2>
             <br/>
                 
             <div class="col-md-offset-3 col-md-6" id="teams-output">

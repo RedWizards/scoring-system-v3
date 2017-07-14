@@ -13,6 +13,7 @@
 		<script src="../assets/js/angular.min.js"></script>
 		<script src="../assets/js/angular-animate.js"></script>
 		<script src="../assets/js/angular-route.js"></script>
+		<script src="../assets/js/judge-view.js"></script>
 
 	</head>
 
@@ -60,7 +61,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-12 text-center option-outline">
 							<a href="pitch.php">
 								<div class="inside-option">
-									<span class="option-title">PITCHING ORDER</span>
+									<span class="option-title">ORDER OF PITCHING</span>
 								</div>
 							</a>
 
@@ -105,7 +106,6 @@
 
 	<script src="../assets/js/jquery.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/judge-view.js"></script>
 	<script src="../assets/js/judge-scoresheet.js"></script>
 
 </html>

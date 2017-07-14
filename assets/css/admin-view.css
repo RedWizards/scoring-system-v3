@@ -112,3 +112,20 @@ span.option-title {
 	height: 50px;
 	border-radius: 0;
 }
+
+#back {
+	height: 50px;
+	color: #fff;
+	background-color: #ff8b00;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#back:hover {
+	background-color: #f08000;
+}
+
+#back:focus {
+	background-color: #f08500;
+}

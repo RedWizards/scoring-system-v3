@@ -24,6 +24,9 @@
 
 			<div class="row outer-row">
 
+				<span class="pull-left">
+					<a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
+				</span>
 				<h2 class="text-center">ADD <strong>TEAM</strong></h2>
 
 				<br/><br/>

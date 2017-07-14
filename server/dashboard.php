@@ -26,7 +26,10 @@
 
 			<div class="row outer-row">
 
-				<h2 class="text-center"><strong>UHAC Cebu Scores</strong></h2>
+				<span class="pull-left">
+					<a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
+				</span>
+				<h2 class="text-center">TEAM<strong> SCORES</strong></h2>
 
 				<br/><br/>
 

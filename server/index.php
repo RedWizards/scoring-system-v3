@@ -25,7 +25,7 @@
 
 			<div class="row outer-row">
 
-				<h2 class="text-center">UHAC Cebu</h2>
+				<h2 class="text-center">UHAC <strong>Cebu</strong></h2>
 				<br/><br/>
 
 				<div class="col-md-offset-3 col-md-6">

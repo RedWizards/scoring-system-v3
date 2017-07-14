@@ -30,7 +30,7 @@
 
 				<h3 id="team-list" class="text-center" ng-hide="activeNow"><b>TEAM LIST</b></h3>
 
-				<div class="row">
+				<div class="row row-section">
 					<div class="col-md-offset-3 col-md-6">
 
 						<div ng-repeat="team in teams">

@@ -68,3 +68,25 @@ a:hover {
 span.option-title {
 	margin-top: 100px;
 }
+
+#judges-list {
+	height: 300px;
+	overflow: auto;
+}
+
+#export-btn {
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#export-btn:hover {
+	background-color: #3923ab;
+}
+
+#export-btn:focus {
+	background-color: #1b0688;
+}

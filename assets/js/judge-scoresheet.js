@@ -30,12 +30,12 @@
 		}
 
 		$scope.setScores = function(team){
-			
+			console.log(team);
 			var success = true;
 
 			for(var i = 0; i < team.criteria.length; i++){
 
-				if((team.criteria[i].score_details.score_id == null) || (team.criteria[i].score_details.score_id == 0)){
+				if(team.criteria[i].score_details.score_id == null){
 					//add scores
 					var response = $.ajax({
 						method: 'post',
@@ -48,10 +48,11 @@
 						}, 
 						async: false
 					}).responseText;
-
+					console.log('Iteration: '+i);
+					console.log("RESPONSE: " + response);
 					team.criteria[i].score_details.score_id = parseInt(JSON.parse(response).id);
 				}
-				else{
+				else if(team.criteria[i].score_details.score_id != null){
 					//update scores
 					$.ajax({
 						method: 'post',
@@ -65,7 +66,6 @@
 					    success= false;
 					});
 				}
-				
 			}
 
 			if(success == true){

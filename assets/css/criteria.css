@@ -3,7 +3,7 @@
 }
 
 label, #criteria_name, #criteria_desc, #criteria_weight {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 #criteria_name, #criteria_desc, #criteria_weight {
@@ -16,12 +16,12 @@ label, #criteria_name, #criteria_desc, #criteria_weight {
 }
 
 #criteria_name {
-    height: 50px;
+    height: 40px;
 }
 
 #criteria_weight {
     width: 40%;
-    height: 50px;
+    height: 40px;
 }
 
 .btn-submit {
@@ -44,4 +44,27 @@ ul {
     border: solid 2px lightgray;
     padding: 10px;
     margin: 10px 0;
+}
+
+#submit-criteria {
+    height: 50px;
+    color: #fff;
+    background-color: #0e0058;
+    border:  solid 2px #fff;
+    width:  120px;
+    transition: background-color 0.5s ease;
+}
+
+#submit-criteria:hover {
+    background-color: #3923ab;
+}
+
+#submit-criteria:focus {
+    background-color: #1b0688;
+}
+
+.criteria-box {
+    border: solid 2px lightgray;
+    padding: 10px;
+    margin: 5px 0;
 }

@@ -37,15 +37,19 @@ header {
 }
 
 .inside-option {
+	padding-top: 50%;
 	height: 250px;
 	background-color: #fff;
-	color: #564c89;
+	color: #ff8b00;
+	border: solid 2px #ff8b00;
 	transition: all 0.5s ease;
+	margin: 5px;
 }
 
 .inside-option:hover {
 	color: #fff;
 	background-color: #564c89;
+	border: solid 2px #564c89;
 }
 
 .option-outline {

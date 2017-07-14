@@ -31,7 +31,7 @@
 				<div class="col-md-offset-3 col-md-6">
 
 					<div>
-						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center option-outline">
 							<a href="criteria.php">
 								<div class="inside-option">
 									<span class="option-title">CREATE CRITERIA</span>
@@ -39,17 +39,15 @@
 							</a>
 						</div>
 
-						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center option-outline">
 							<a href="team.php">
 								<div class="inside-option">
 									<span class="option-title">ADD TEAM</span>
 								</div>
 							</a>
 						</div>
-					</div>
 
-					<div>
-						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center option-outline">
 							<a href="dashboard.php">
 								<div class="inside-option">
 									<span class="option-title">SCORING DASHBOARD</span>
@@ -57,14 +55,15 @@
 							</a>
 						</div>
 
-						<div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
-							<a href="#"><!--<a href="operation.php">-->
+					</div>
+
+						<!-- <div class="col-md-6 col-sm-6 col-xs-12 text-center option-outline">
+							<a href="#">
 								<div class="inside-option">
 									<span class="option-title">OPERATIONS</span>
 								</div>
 							</a>
-						</div>
-					</div>
+						</div> -->
 
 				</div>
 

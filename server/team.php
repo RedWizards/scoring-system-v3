@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -10,50 +10,68 @@
 		<script src="../assets/js/angular.min.js"></script>
 		<script src="../assets/js/angular-animate.js"></script>
 		<script src="../assets/js/angular-route.js"></script>
+		<link rel="stylesheet" href="../assets/css/admin-view.css">
 
 	</head>
 
-	<body>
+	<body ng-app="view" ng-controller="judges-score">
 
-		<div style="margin: 50px;">
+			<header>
+				<div class="text-center">
+					<h3 id="scoresheet-name"><b>ADMINISTRATOR</b> VIEW</h3>
+				</div>
+			</header>
 
-			<h3>TEAM REGISTRATION</h3><br/><br/>
+			<div class="row outer-row">
 
-			<a href="./index.php">Score Board</a>
+				<h2 class="text-center">ADD <strong>TEAM</strong></h2>
 
-			<div>
-				<form id="reg-form">
+				<br/><br/>
+
+				<div class="col-md-offset-3 col-md-6">
+
 					<div>
-						<label for="team_name">Team Name </label>
-						<input type="text" name="team_name" placeholder="..." class="form-control" required/>
-						<br/>
+						<form id="reg-form">
+							<div>
+								<label for="team_name">Team Name </label>
+								<input type="text" name="team_name" placeholder="..." class="form-control input-team" required/>
+								<br/><br/>
+							</div>
+							<div>
+								<label for="project_name">Project Name </label>
+								<input type="text" name="project_name" placeholder="..." class="form-control input-team" required/>
+								<br/><br/>
+							</div>
+							<div>
+								<label for="project_type">Project Type</label>
+								<input type="text" name="project_type" placeholder="..." class="form-control input-team" required/>
+								<br/><br/>
+							</div>
+							<div>
+								<label for="short_desc">Short Description</label>
+								<textarea name="short_desc" placeholder="..." class="form-control input-team" required></textarea>
+								<br/><br/>
+							</div>
+							<div>
+								<label for="long_desc">Long Description</label>
+								<textarea name="long_desc" placeholder="..." class="form-control input-team" required></textarea>
+								<br/><br/>
+							</div>
+							<br/>
+							<div class="text-center">
+								<input type="submit" value="ADD TEAM" name="reg_team" id="submit-team" class="form-control btn btn-primary" />
+							</div>
+						</form>
 					</div>
-					<div>
-						<label for="project_name">Project Name </label>
-						<input type="text" name="project_name" placeholder="..." class="form-control" required/>
-						<br/>
-					</div>
-					<div>
-						<label for="project_type">Project Type</label>
-						<input type="text" name="project_type" placeholder="..." class="form-control" required/>
-						<br/>
-					</div>
-					<div>
-						<label for="short_desc">Short Description</label>
-						<textarea name="short_desc" placeholder="..." class="form-control" required></textarea>
-						<br/>
-					</div>
-					<div>
-						<label for="long_desc">Long Description</label>
-						<textarea name="long_desc" placeholder="..." class="form-control" required></textarea>
-						<br/>
-					</div>
-					<br/>
-					<input type="submit" value="ADD TEAM" name="reg_team" class="form-control btn btn-primary" style="width: 300px;" />
-				</form>
+
+
+				</div>
+
 			</div>
 
-		</div>
+			<div id="footer" class="text-center">
+				<small class="sub">POWERED BY</small><br/><strong>RED Wizard Events Management</strong><br/>&copy; 2017
+			</div>
 			
 	</body>
 
@@ -102,4 +120,4 @@
 		});
 	</script>
 
-</html>
+</html>	

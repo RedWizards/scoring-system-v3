@@ -68,3 +68,47 @@ a:hover {
 span.option-title {
 	margin-top: 100px;
 }
+
+#judges-list {
+	height: 300px;
+	overflow: auto;
+}
+
+#export-btn {
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#export-btn:hover {
+	background-color: #3923ab;
+}
+
+#export-btn:focus {
+	background-color: #1b0688;
+}
+
+#submit-team {
+	height: 50px;
+	color: #fff;
+	background-color: #0e0058;
+	border:  solid 2px #fff;
+	width:  120px;
+	transition: background-color 0.5s ease;
+}
+
+#submit-team:hover {
+	background-color: #3923ab;
+}
+
+#submit-team:focus {
+	background-color: #1b0688;
+}
+
+.input-team {
+	height: 50px;
+	border-radius: 0;
+}

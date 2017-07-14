@@ -8,6 +8,15 @@ function regJudgeClose() {
 	document.getElementById("event-cover").style.opacity = 1;
 }
 
+function reset(){
+	var response = confirm('Are you sure to reset the scoring?');
+
+	if (response == true) {
+	    window.location.href = '.././database/reset.php';
+	} else {
+	    txt = "You pressed Cancel!";
+	}
+}
 /*
 function submitName(){
 	if($('#input-container').val() == ""){

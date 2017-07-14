@@ -46,11 +46,19 @@
 							project_id: team.project_id,
 							score: team.criteria[i].score_details.score
 						}, 
-						async: false
+						async: false,
+
 					}).responseText;
-					console.log('Iteration: '+i);
-					console.log("RESPONSE: " + response);
-					team.criteria[i].score_details.score_id = parseInt(JSON.parse(response).id);
+
+					try {
+					    var response = JSON.parse(response);
+					    console.log('Iteration: '+i);
+						console.log("RESPONSE: " + response);
+						team.criteria[i].score_details.score_id = parseInt(response);
+					}
+					catch(err) {
+					    success = false;
+					}
 				}
 				else if(team.criteria[i].score_details.score_id != null){
 					//update scores
@@ -72,10 +80,9 @@
 				alert("Scores submitted!");
 				$scope.closeTeam(team);
 			}else{
-				alert("Error submitting scores.");
+				alert("Some of the scores are not submitted.\nPlease try again with a valid input.");
+				window.location.href = './scoresheet.php';
 			}
-
-			console.log($scope.teams);
 		}		
 		
 		$scope.updateScore = function(team) {

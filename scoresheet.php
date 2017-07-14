@@ -62,41 +62,42 @@
 										</div>
 								</div>
 								
-								<form id="main-sheet-{{team.team_id}}">
-									
-									<h3><i>SCORING SHEET</i></h3>
-
-									<hr/>
+								<div>
+									<form id="main-sheet-{{team.team_id}}">
 										
-									<div ng-repeat="criteria in team.criteria">
-										
-										<div class="row" class="criteria">
+										<h3><i>SCORING SHEET</i></h3>
 
-											<div class="pull-left" style="width: 60%; word-wrap: true;">
-												<span><b>{{criteria.criteria_desc}}</b></span><br/>
-												<small><i>{{criteria.criteria_longdesc}}</i></small>
-											</div>
-																
-											<div class="pull-right" style="width: 30%; word-wrap: true;">
-												<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="0" max="{{criteria.criteria_weight}}" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+										<hr/>
+											
+										<div ng-repeat="criteria in team.criteria">
+											
+											<div class="row row-section" class="criteria">
+
+												<div class="pull-left" style="width: 70%; word-wrap: true;">
+													<span><b>{{criteria.criteria_desc}}</b></span><br/>
+													<small><i>{{criteria.criteria_longdesc}}</i></small>
+												</div>
+																	
+												<div class="pull-right" style="width: 30%; word-wrap: true;">
+													<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="0" max="{{criteria.criteria_weight}}" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+												</div>
+
 											</div>
 
 										</div>
-
-									</div>
-										
-									<hr/>
-										
-									<h2 class="pull-left">TOTAL</h2><h2 class="pull-right">{{team.total}} %</h2>
-
-									<br/><br/>
-									
-									<input type="submit" value="submit" id="submit-btn" ng-click="setScores(team)" class="text-center">
-										
-										
-									<br/>
-										
-								</form>
+											
+										<hr/>
+											
+										<div class="row row-section">
+											<h2 class="pull-left">TOTAL</h2><h2 class="pull-right">{{team.total}} %</h2>
+											<br/><br/>
+											<input type="submit" value="submit" id="submit-btn" ng-click="setScores(team)" />
+										</div>
+											
+										<br/>
+											
+									</form>
+								</div>
 								
 							</div>
 							

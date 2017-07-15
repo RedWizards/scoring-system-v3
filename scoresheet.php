@@ -68,23 +68,37 @@
 										<h3><i>SCORING SHEET</i></h3>
 
 										<hr/>
+
+										<table>
+
 											
-										<div ng-repeat="criteria in team.criteria">
-											
-											<div class="row row-section" class="criteria">
+											<tr ng-repeat="criteria in team.criteria" id="criteria-box">
 
-												<div class="pull-left" style="width: 70%; word-wrap: true;">
-													<span><b>{{criteria.criteria_desc}}</b></span><br/>
-													<small><i>{{criteria.criteria_longdesc}}</i></small>
-												</div>
-																	
-												<div class="pull-right" style="width: 30%; word-wrap: true;">
-													<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="1" max="{{criteria.criteria_weight}}" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
-												</div>
+													<td style="width: 70%; word-wrap: true;">
+														<span><b>{{criteria.criteria_desc}}</b></span><br/>
+														<small><i>{{criteria.criteria_longdesc}}</i></small>
+													</td>
+																		
+													<td class="text-right" style="width: 30%; word-wrap: true;">
+														<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="1" max="{{criteria.criteria_weight}}" style="width: 50%;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+													</td>
+												
+												<!-- <div class="row row-section" class="criteria">
+												
+													<div class="pull-left" style="width: 70%; word-wrap: true;">
+														<span><b>{{criteria.criteria_desc}}</b></span><br/>
+														<small><i>{{criteria.criteria_longdesc}}</i></small>
+													</div>
+																		
+													<div class="pull-right" style="width: 30%; word-wrap: true;">
+														<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="1" max="{{criteria.criteria_weight}}" style="width: 4em;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+													</div>
+												
+												</div> -->
 
-											</div>
+											</tr>
 
-										</div>
+										</table>
 											
 										<hr/>
 											

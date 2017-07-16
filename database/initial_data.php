@@ -109,7 +109,7 @@
 						$row = (object) $score;
 					}
 
-				    $total += $row->score;
+				    $total += (int)$row->score;
 
 				    //add to json the score data
 					$criteria->score_details = $row;

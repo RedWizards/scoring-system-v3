@@ -5,7 +5,7 @@
 
 	<head>
 
-		<title>UHAC Cebu</title>
+		<title>UHAC Manila</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="../assets/images/uhac.ico" type="image/ico" sizes="32x32">
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
 		<script src="../assets/js/angular-animate.js"></script>
 		<script src="../assets/js/angular-route.js"></script>
 		<link rel="stylesheet" href="../assets/css/admin-view.css">
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 
 	</head>
 
@@ -29,6 +30,7 @@
 				<span class="pull-left">
 					<a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
 				</span>
+				<br/><br/>
 				<h2 class="text-center">ADD <strong>TEAM</strong></h2>
 
 				<br/><br/>

@@ -12,6 +12,7 @@
         <script src="../assets/js/jquery.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
         <script src="../assets/js/criteria.js"></script>
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     </head>
 
     <body ng-controller="criteriaCtrl" ng-init="init()">
@@ -27,6 +28,7 @@
             <span class="pull-left">
                 <a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
             </span>
+            <br/><br/>
             <h2 class="text-center">CREATE <strong>CRITERIA</strong></h2>
             <br/>
 
@@ -49,7 +51,7 @@
 
                     <div class="criteria_div">
                         <label for="criteria_desc">Criteria Description</label></br/>
-                        <textarea type="text" name="criteria_desc" ng-model="new_desc" id="criteria_desc" required/></textarea><br/>
+                        <textarea type="text" name="criteria_desc" ng-model="new_desc" id="criteria_desc"/></textarea><br/>
                     </div>
 
                     <div class="criteria_div text-left">

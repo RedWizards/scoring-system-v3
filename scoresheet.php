@@ -4,13 +4,13 @@
 
 	<head>
 
-		<title>UHAC Cebu</title>
+		<title>UHAC Manila</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="assets/images/uhac.ico" type="image/ico" sizes="32x32">
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<!--
+		
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		-->
+		
 		<link rel="stylesheet" href="assets/css/judge-view.css">
 		<script src="assets/js/angular.min.js"></script>
 		<script src="assets/js/angular-animate.js"></script>
@@ -22,7 +22,7 @@
 
 			<header>
 				<div class="text-center">
-					<h3 id="scoresheet-name"><b>UHAC</b> Cebu</h3>
+					<h3 id="scoresheet-name"><b>UHAC</b> Manila</h3>
 				</div>
 			</header>
 			
@@ -69,10 +69,10 @@
 
 										<hr/>
 
-										<table>
+										<table style="width: 100%;">
 
 											
-											<tr ng-repeat="criteria in team.criteria" id="criteria-box">
+											<tr ng-repeat="criteria in team.criteria" id="criteria-box" style="width: 100%; height: 70px;">
 
 													<td style="width: 70%; word-wrap: true;">
 														<span><b>{{criteria.criteria_desc}}</b></span><br/>
@@ -80,7 +80,7 @@
 													</td>
 																		
 													<td class="text-right" style="width: 30%; word-wrap: true;">
-														<h4><input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="1" max="{{criteria.criteria_weight}}" style="width: 50%;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span></h4>
+														<input type="number" class="text-right" name="criteria-team{{team.team_id}}-criteria{{criteria.criteria_id}}" placeholder="0" min="1" max="{{criteria.criteria_weight}}" style="width: 50%;" ng-model="criteria.score_details.score" ng-change="updateScore(team)" value="{{criteria.score_details.score}}"/><span> / {{criteria.criteria_weight}}</span>
 													</td>
 												
 												<!-- <div class="row row-section" class="criteria">

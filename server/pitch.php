@@ -12,6 +12,7 @@
         <script src="../assets/js/jquery.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
         <script src="../assets/js/teams.js"></script>
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     </head>
 
     <body ng-controller="teamsInit" ng-init="init()">
@@ -27,6 +28,7 @@
             <span class="pull-left">
                 <a href="index.php"><button id="back"><span class="glyphicon glyphicon-chevron-left"></span> BACK</button></a>
             </span>
+            <br/><br/>
             <h2 class="text-center">ORDER OF <strong>PITCHING</strong></h2>
             <br/>
                 

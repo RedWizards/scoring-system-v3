@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Uhac Cebu | Scores</title>
+	<title>UHAC Manila | Scores</title>
 		<!--
 		<link rel="icon" href="images/icon.ico" type="image/png" sizes="32x32">
 		-->

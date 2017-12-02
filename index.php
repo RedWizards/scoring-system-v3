@@ -6,13 +6,11 @@
 
 	<head>
 
-		<title>UHAC Cebu</title>
+		<title>UHAC Manila</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="assets/images/uhac.ico" type="image/ico" sizes="32x32">
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<!--
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		-->
 		<link rel="stylesheet" href="assets/css/judge-view.css">
 
 	</head>
@@ -24,7 +22,7 @@
 				<tr>
 					<td>
 						<div id="p1" class="text-center">
-							<h1 id="event-name"><b>UHAC</b> Cebu</h1>
+							<h1 id="event-name"><b>UHAC</b> Manila</h1>
 							<small id="system-name"><b>SCORING SYSTEM</small>
 						</div>
 									
